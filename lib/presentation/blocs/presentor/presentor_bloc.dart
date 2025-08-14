@@ -8,7 +8,7 @@ import '../../../core/utils/app_util.dart';
 import '../../../core/utils/date_util.dart';
 import '../../../data/models/history.dart';
 import '../../../data/models/songext.dart';
-import '../../../data/repository/database_repository.dart';
+import '../../../data/repositories/database_repository.dart';
 import '../../../core/di/injectable.dart';
 import '../../screens/presentor/common/presentor_utils.dart';
 

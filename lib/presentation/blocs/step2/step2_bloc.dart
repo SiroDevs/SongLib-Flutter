@@ -6,10 +6,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../core/utils/app_util.dart';
 import '../../../core/utils/constants/pref_constants.dart';
 import '../../../data/models/song.dart';
-import '../../../data/repository/database_repository.dart';
-import '../../../data/repository/pref_repository.dart';
+import '../../../data/repositories/database_repository.dart';
+import '../../../data/repositories/pref_repository.dart';
 import '../../../core/di/injectable.dart';
-import '../../../domain/repository/selection_repository.dart';
+import '../../../domain/repositories/selection_repository.dart';
 
 part 'step2_event.dart';
 part 'step2_state.dart';

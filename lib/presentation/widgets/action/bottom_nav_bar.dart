@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/di/injectable.dart';
 import '../../theme/theme_colors.dart';
 import '../../../domain/entities/basic_model.dart';
-import '../../../data/repository/pref_repository.dart';
+import '../../../data/repositories/pref_repository.dart';
 import 'app_nav_icon.dart';
 
 /// Custom Bottom Navigation Bar that will handle the page to be displayed on the dashboard

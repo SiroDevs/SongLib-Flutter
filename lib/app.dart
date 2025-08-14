@@ -4,14 +4,13 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'core/auth/auth_bloc.dart';
-import 'domain/repository/sync_repository.dart';
+import 'domain/repositories/sync_repository.dart';
 import 'core/network/api_util.dart';
 import 'presentation/theme/bloc/theme_bloc.dart';
 import 'presentation/theme/theme_data.dart';
 import 'core/utils/constants/pref_constants.dart';
-import 'core/utils/date_util.dart';
-import 'data/repository/auth_repository.dart';
-import 'data/repository/pref_repository.dart';
+import 'data/repositories/auth_repository.dart';
+import 'data/repositories/pref_repository.dart';
 import 'core/di/injectable.dart';
 import 'presentation/navigator/main_navigator.dart';
 import 'presentation/navigator/route_names.dart';
@@ -116,10 +115,6 @@ class AppViewState extends State<AppView> {
                       (route) => false,
                     );
                   } else {
-                    _prefrepo.setPrefString(
-                      PrefConstants.dateInstalledKey,
-                      dateNow(),
-                    );
                     navigator.pushNamedAndRemoveUntil<void>(
                       RouteNames.step1Selection,
                       (route) => false,

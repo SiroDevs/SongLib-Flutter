@@ -8,8 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../data/sources/local/app_database.dart';
 import '../utils/app_util.dart';
 import '../utils/constants/app_constants.dart';
-import '../../data/repository/database_repository_impl.dart';
-import '../../data/repository/database_repository.dart';
+import '../../data/repositories/database_repository_impl.dart';
+import '../../data/repositories/database_repository.dart';
 import 'injectable.config.dart';
 
 final getIt = GetIt.instance;

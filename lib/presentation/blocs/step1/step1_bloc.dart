@@ -7,10 +7,10 @@ import '../../../domain/entities/basic_model.dart';
 import '../../../core/utils/app_util.dart';
 import '../../../core/utils/constants/pref_constants.dart';
 import '../../../data/models/book.dart';
-import '../../../data/repository/database_repository.dart';
-import '../../../data/repository/pref_repository.dart';
+import '../../../data/repositories/database_repository.dart';
+import '../../../data/repositories/pref_repository.dart';
 import '../../../core/di/injectable.dart';
-import '../../../domain/repository/selection_repository.dart';
+import '../../../domain/repositories/selection_repository.dart';
 
 part 'step1_event.dart';
 part 'step1_state.dart';

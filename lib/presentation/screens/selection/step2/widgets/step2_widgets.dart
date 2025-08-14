@@ -11,10 +11,10 @@ class BackgroundProgress extends StatelessWidget {
   final int progress;
 
   const BackgroundProgress({
-    Key? key,
+    super.key,
     required this.size,
     required this.progress,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +39,11 @@ class ForegroundProgress extends StatelessWidget {
   final String feedback;
 
   const ForegroundProgress({
-    Key? key,
+    super.key,
     required this.progress,
     required this.radius,
     required this.feedback,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ class ForegroundProgress extends StatelessWidget {
 }
 
 class WaveProgress extends StatelessWidget {
-  const WaveProgress({Key? key}) : super(key: key);
+  const WaveProgress({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -54,9 +54,6 @@ class SearchSongItem extends StatelessWidget {
             maxLines: 1,
             style: TextStyles.headingStyle3.bold,
           ).expanded(),
-          if (isSearching) ...[
-            TagItem(tagText: refineTitle(song.songbook), height: height),
-          ],
           TagItem(tagText: versesText, height: height),
           if (hasChorus) TagItem(tagText: chorusText, height: height),
           Icon(
@@ -70,10 +67,12 @@ class SearchSongItem extends StatelessWidget {
           Text(
             refineContent(verses[0]),
             maxLines: 2,
-            style: TextStyles.bodyStyle2
-                .textHeight(1.5),
+            style: TextStyles.bodyStyle2.textHeight(1.5),
           ).expanded(),
         ].toRow(),
+        if (isSearching) ...[
+          TagItem(tagText: refineTitle(song.songbook), height: height),
+        ],
       ],
     );
     return InkWell(

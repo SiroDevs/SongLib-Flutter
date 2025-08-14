@@ -5,10 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../core/di/injectable.dart';
-import '../../../data/repository/database_repository.dart';
+import '../../../data/repositories/database_repository.dart';
 import '../../../data/models/models.dart';
-import '../../../data/repository/pref_repository.dart';
-import '../../../domain/repository/sync_repository.dart';
+import '../../../data/repositories/pref_repository.dart';
+import '../../../domain/repositories/sync_repository.dart';
 import '../../../core/utils/app_util.dart';
 
 part 'home_event.dart';

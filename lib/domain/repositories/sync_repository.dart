@@ -4,8 +4,8 @@ import '../../core/di/injectable.dart';
 import 'selection_repository.dart';
 import '../../data/models/models.dart';
 import '../../core/utils/constants/pref_constants.dart';
-import '../../data/repository/database_repository.dart';
-import '../../data/repository/pref_repository.dart';
+import '../../data/repositories/database_repository.dart';
+import '../../data/repositories/pref_repository.dart';
 
 class SyncRepository {
   final _prefRepo = getIt<PrefRepository>();

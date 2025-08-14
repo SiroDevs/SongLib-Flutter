@@ -7,26 +7,26 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:window_manager/window_manager.dart';
 
-import '../../../../data/models/models.dart';
-import '../../../../data/repository/pref_repository.dart';
+import '../../../../core/di/injectable.dart';
 import '../../../../core/utils/app_util.dart';
 import '../../../../core/utils/constants/pref_constants.dart';
+import '../../../../data/models/models.dart';
+import '../../../../data/repositories/pref_repository.dart';
+import '../../../blocs/presentor/presentor_bloc.dart';
 import '../../../widgets/action/fab_widget.dart';
 import '../../../widgets/presentor/slide_container.dart';
 import '../../../widgets/presentor/indicators.dart';
 import '../../../widgets/progress/custom_snackbar.dart';
 import '../../../widgets/progress/general_progress.dart';
-import '../../../../core/di/injectable.dart';
 import '../../../theme/theme_colors.dart';
-import '../../../blocs/presentor/presentor_bloc.dart';
 import '../../common/app_intents.dart';
 import '../common/presentor_utils.dart';
 import '../common/slide_utils.dart';
 
-part 'widgets/presentor_slide.dart';
 part 'widgets/fab_widget.dart';
 part 'widgets/presentor_body.dart';
 part 'widgets/presentor_details.dart';
+part 'widgets/presentor_slide.dart';
 
 class PresentorScreen extends StatefulWidget {
   final SongExt song;

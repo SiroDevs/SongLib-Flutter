@@ -4,8 +4,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../core/utils/app_util.dart';
-import '../../../data/repository/database_repository.dart';
-import '../../../data/repository/pref_repository.dart';
+import '../../../data/repositories/database_repository.dart';
+import '../../../data/repositories/pref_repository.dart';
 import '../../../core/utils/constants/pref_constants.dart';
 import '../../widgets/inputs/radio_input.dart';
 import '../../widgets/progress/custom_snackbar.dart';

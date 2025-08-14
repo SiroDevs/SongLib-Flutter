@@ -30,7 +30,7 @@ android {
         targetSdkVersion 34
         compileSdkVersion 34
         multiDexEnabled true
-        versionCode 8
+        versionCode 800
         versionName "1.0.8"
     }
 
