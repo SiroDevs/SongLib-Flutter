@@ -4,7 +4,7 @@ part of 'advanced_progress.dart';
 /// Represents two progress, primary and secondary.
 class AdvancedProgress extends StatelessWidget {
   const AdvancedProgress({
-    Key? key,
+    super.key,
     required this.radius,
     this.primaryValue,
     this.secondaryValue,
@@ -23,7 +23,7 @@ class AdvancedProgress extends StatelessWidget {
     this.secondaryColor,
     this.tertiaryColor,
     this.child,
-  }) : super(key: key);
+  });
 
   /// Total radius for whole widget.
   final double radius;

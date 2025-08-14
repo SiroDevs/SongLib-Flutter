@@ -9,7 +9,6 @@ import 'core/network/api_util.dart';
 import 'presentation/theme/bloc/theme_bloc.dart';
 import 'presentation/theme/theme_data.dart';
 import 'core/utils/constants/pref_constants.dart';
-import 'core/utils/date_util.dart';
 import 'data/repositories/auth_repository.dart';
 import 'data/repositories/pref_repository.dart';
 import 'core/di/injectable.dart';
@@ -116,10 +115,6 @@ class AppViewState extends State<AppView> {
                       (route) => false,
                     );
                   } else {
-                    _prefrepo.setPrefString(
-                      PrefConstants.dateInstalledKey,
-                      dateNow(),
-                    );
                     navigator.pushNamedAndRemoveUntil<void>(
                       RouteNames.step1Selection,
                       (route) => false,
