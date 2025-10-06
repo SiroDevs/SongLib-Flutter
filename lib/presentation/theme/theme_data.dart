@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/utils/constants/app_constants.dart';
 import '../../data/repositories/pref_repository.dart';
 import '../../core/utils/app_util.dart';
 import '../../core/di/injectable.dart';
@@ -16,6 +17,7 @@ class AppTheme {
   static ThemeData lightTheme() {
     return ThemeData(
       scaffoldBackgroundColor: ThemeColors.accent1,
+      fontFamily: AppConstants.kFontFamily,
       colorScheme: const ColorScheme(
         brightness: Brightness.light,
         primary: ThemeColors.primary,
@@ -45,6 +47,7 @@ class AppTheme {
   static ThemeData darkTheme() {
     return ThemeData(
       scaffoldBackgroundColor: ThemeColors.primaryDark1,
+      fontFamily: AppConstants.kFontFamily,
       colorScheme: const ColorScheme(
         brightness: Brightness.light,
         primary: ThemeColors.primary2,

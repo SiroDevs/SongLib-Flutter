@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 
 import '../../../../core/utils/constants/app_assets.dart';
@@ -11,6 +10,7 @@ import '../../../../domain/entities/basic_model.dart';
 import '../../../../data/models/book.dart';
 import '../../../../core/utils/app_util.dart';
 import '../../../blocs/step1/step1_bloc.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../navigator/route_names.dart';
 import '../../../theme/theme_colors.dart';
 import '../../../theme/theme_styles.dart';

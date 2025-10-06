@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:floor/floor.dart';
+import 'package:froom/froom.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
 
 import '../../../core/utils/app_util.dart';
@@ -28,7 +28,7 @@ part 'app_database.g.dart';
   ],
   views: [HistoryExt, ListedExt, SongExt],
 )
-abstract class AppDatabase extends FloorDatabase {
+abstract class AppDatabase extends FroomDatabase {
   BooksDao get booksDao;
   DraftsDao get draftsDao;
   EditsDao get editsDao;

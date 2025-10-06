@@ -5,7 +5,6 @@ import 'package:dartx/dartx.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:textstyle_extensions/textstyle_extensions.dart';
 
@@ -14,6 +13,7 @@ import '../../../core/utils/app_util.dart';
 import '../../../core/utils/constants/app_assets.dart';
 import '../../../data/models/models.dart';
 import '../../blocs/home/home_bloc.dart';
+import '../../l10n/app_localizations.dart';
 import '../../navigator/route_names.dart';
 import '../../theme/theme_colors.dart';
 import '../../theme/theme_fonts.dart';

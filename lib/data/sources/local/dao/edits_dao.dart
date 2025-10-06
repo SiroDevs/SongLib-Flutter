@@ -1,4 +1,4 @@
-import 'package:floor/floor.dart';
+import 'package:froom/froom.dart';
 
 import '../../../../core/utils/constants/app_constants.dart';
 import '../../../models/edit.dart';
