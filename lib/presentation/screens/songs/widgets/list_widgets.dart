@@ -21,7 +21,7 @@ class BooksList extends StatelessWidget {
             text: book.title!,
             isSelected: selectedBook == index,
             onPressed: () {
-              context.read<HomeBloc>().add(FilterData(book));
+              context.read<MainBloc>().add(FilterData(book));
             },
           );
         },

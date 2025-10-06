@@ -40,7 +40,7 @@ class Step2ScreenState extends State<Step2Screen> {
           } else if (state is Step2SavedState) {
             Navigator.pushNamedAndRemoveUntil(
               context,
-              RouteNames.home,
+              RouteNames.main,
               (route) => false,
             );
           }

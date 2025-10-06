@@ -5,8 +5,8 @@ import 'dart:io';
 // ignore: depend_on_referenced_packages
 import 'package:http/http.dart' as http;
 
-import '../utils/app_util.dart';
-import '../utils/constants/api_constants.dart';
+import '../../../core/utils/app_util.dart';
+import '../../../core/utils/constants/api_constants.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 Future<bool> isConnectedToInternet() async {

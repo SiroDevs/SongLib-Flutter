@@ -7,7 +7,7 @@ import '../../../core/utils/app_util.dart';
 import '../../widgets/list_items/search_song_item.dart';
 import '../../widgets/progress/general_progress.dart';
 import '../presentor/ui/presentor_screen.dart';
-import '../../blocs/home/home_bloc.dart';
+import '../../blocs/main/main_bloc.dart';
 
 class LikesScreen extends StatelessWidget {
   final List<Book> books;
@@ -16,9 +16,9 @@ class LikesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeBloc, HomeState>(
+    return BlocBuilder<MainBloc, MainState>(
       builder: (context, state) {
-        if (state is HomeFilteredState && state.likes.isNotEmpty) {
+        if (state is FilteredState && state.likes.isNotEmpty) {
           return ListView.builder(
             itemCount: state.likes.length,
             itemBuilder: (context, index) {

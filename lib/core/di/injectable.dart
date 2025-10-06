@@ -6,10 +6,10 @@ import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../data/sources/local/app_database.dart';
-import '../utils/app_util.dart';
-import '../utils/constants/app_constants.dart';
 import '../../data/repositories/database_repository_impl.dart';
 import '../../data/repositories/database_repository.dart';
+import '../utils/app_util.dart';
+import '../utils/constants/app_constants.dart';
 import 'injectable.config.dart';
 
 final getIt = GetIt.instance;
@@ -32,9 +32,8 @@ abstract class RegisterModule {
 
   @singleton
   @preResolve
-  Future<AppDatabase> provideAppDatabase() async => await $FloorAppDatabase
+  Future<AppDatabase> provideAppDatabase() async => await $FroomAppDatabase
       .databaseBuilder(await AppConstants.databaseFile)
-      .addMigrations(migrations)
       .build();
 
   @lazySingleton

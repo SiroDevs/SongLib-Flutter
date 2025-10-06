@@ -8,11 +8,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:textstyle_extensions/textstyle_extensions.dart';
 
-import '../../../core/network/api_util.dart';
+import '../../../data/sources/remote/api_service.dart';
 import '../../../core/utils/app_util.dart';
 import '../../../core/utils/constants/app_assets.dart';
 import '../../../data/models/models.dart';
-import '../../blocs/home/home_bloc.dart';
+import '../../blocs/main/main_bloc.dart';
 import '../../l10n/app_localizations.dart';
 import '../../navigator/route_names.dart';
 import '../../theme/theme_colors.dart';
@@ -34,15 +34,15 @@ part 'widgets/search_widget.dart';
 part 'widgets/sidebar.dart';
 part 'widgets/sidebar_btn.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => HomeScreenState();
+  State<MainScreen> createState() => HomeScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen> {
-  late HomeBloc _bloc;
+class HomeScreenState extends State<MainScreen> {
+  late MainBloc _bloc;
   Timer? _syncTimer;
 
   bool periodicSyncStarted = false;
@@ -77,27 +77,27 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     var l10n = AppLocalizations.of(context)!;
     return BlocProvider(
-      create: (context) => HomeBloc()..add(FetchData()),
-      child: BlocConsumer<HomeBloc, HomeState>(
+      create: (context) => MainBloc()..add(FetchData()),
+      child: BlocConsumer<MainBloc, MainState>(
         listener: (context, state) {
-          _bloc = context.read<HomeBloc>();
-          if (state is HomeDataSyncedState) {
+          _bloc = context.read<MainBloc>();
+          if (state is DataSyncedState) {
             books = state.books;
             songs = state.songs;
             _bloc.add(FilterData(books[selectedBook]));
-          } else if (state is HomeDataFetchedState) {
+          } else if (state is DataFetchedState) {
             books = state.books;
             songs = state.songs;
             _bloc.add(FilterData(books[selectedBook]));
             //if (!periodicSyncStarted) startPeriodicSync();
-          } else if (state is HomeFilteredState) {
+          } else if (state is FilteredState) {
             likes = state.likes;
             filtered = state.songs;
             selectedBook = books.indexOf(state.book);
             selectedSong = state.songs[0];
-          } else if (state is HomeFailureState) {
+          } else if (state is FailureState) {
             CustomSnackbar.show(context, feedbackMessage(state.feedback, l10n));
-          } else if (state is HomeResettedState) {
+          } else if (state is ResettedState) {
             CustomSnackbar.show(context, l10n.redirectingYou);
             Navigator.pushNamedAndRemoveUntil(
               context,
@@ -116,7 +116,7 @@ class HomeScreenState extends State<HomeScreen> {
                 title: l10n.problemDisplaySongs,
                 showRetry: true,
                 titleRetry: l10n.selectSongsAfresh,
-                onRetry: () => context.read<HomeBloc>().add(const ResetData()),
+                onRetry: () => context.read<MainBloc>().add(const ResetData()),
               ),
             ),
             fetching: () => Scaffold(body: HomeLoading()),

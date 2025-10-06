@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/home/home_screen.dart';
+import '../screens/main/main_screen.dart';
 import '../widgets/text_scale_factor.dart';
 import '../screens/selection/step1/step1_screen.dart';
 import '../screens/selection/step2/step2_screen.dart';
@@ -61,7 +61,7 @@ class MainNavigatorState extends State<MainNavigator> with MainNavigationMixin {
       RouteNames.splash: (context) => const SplashScreen(),
       RouteNames.step1Selection: (context) => const Step1Screen(),
       RouteNames.step2Selection: (context) => const Step2Screen(),
-      RouteNames.home: (context) => const HomeScreen(),
+      RouteNames.main: (context) => const MainScreen(),
       RouteNames.settings: (context) => const SettingsScreen(),
     };
 

@@ -4,7 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'core/auth/auth_bloc.dart';
 import 'core/di/injectable.dart';
-import 'core/network/api_util.dart';
+import 'data/sources/remote/api_service.dart';
 import 'data/repositories/auth_repository.dart';
 import 'data/repositories/pref_repository.dart';
 import 'core/utils/constants/pref_constants.dart';
@@ -105,7 +105,7 @@ class AppViewState extends State<AppView> {
                     await _syncRepo.syncData();
                   }
                   navigator.pushNamedAndRemoveUntil<void>(
-                    RouteNames.home,
+                    RouteNames.main,
                     (route) => false,
                   );
                 } else {

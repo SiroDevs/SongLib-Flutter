@@ -1,4 +1,4 @@
-part of '../home_screen.dart';
+part of '../main_screen.dart';
 
 class SidebarBtn extends StatefulWidget {
   final IconData icon;

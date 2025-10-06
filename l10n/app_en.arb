@@ -1,154 +1,524 @@
 {
     "@@locale": "en",
     "feedback": "Feedback",
-    "@feedback": {},
+    "@feedback": {
+        "description": "Label for feedback section or button"
+    },
 
     "appName": "SongLib",
+    "@appName": {
+        "description": "The name of the application"
+    },
     "listTitle": "Song Lists",
+    "@listTitle": {
+        "description": "Title for song lists section"
+    },
     "searchTitle": "Search Songs",
+    "@searchTitle": {
+        "description": "Title for search songs section"
+    },
     "likesTitle": "Liked Songs",
+    "@likesTitle": {
+        "description": "Title for liked songs section"
+    },
     "historiesTitle": "Histories",
+    "@historiesTitle": {
+        "description": "Title for song history section"
+    },
     "draftTitle": "Song Drafts",
+    "@draftTitle": {
+        "description": "Title for song drafts section"
+    },
     "settingsTitle": "Settings",
+    "@settingsTitle": {
+        "description": "Title for settings section"
+    },
     "helpdeskTitle": "Help Desk",
+    "@helpdeskTitle": {
+        "description": "Title for help desk section"
+    },
     "donateTitle": "How to Donate",
+    "@donateTitle": {
+        "description": "Title for donation information section"
+    },
     "merchandiseTitle": "Buy our Merchandise",
+    "@merchandiseTitle": {
+        "description": "Title for merchandise section"
+    },
     "booksTitle": "Select Song Books",
+    "@booksTitle": {
+        "description": "Title for song book selection"
+    },
     "booksTitleLoading": "Loading data ...",
+    "@booksTitleLoading": {
+        "description": "Loading message while fetching song books data"
+    },
     "homeTitle": "Home",
+    "@homeTitle": {
+        "description": "Title for home section"
+    },
     "listedTitle": "Adding a new list",
+    "@listedTitle": {
+        "description": "Title for adding new song list"
+    },
     "editorTitle": "Drafting a new song",
+    "@editorTitle": {
+        "description": "Title for song drafting/editing screen"
+    },
     "songTitle": "Your song in one line",
+    "@songTitle": {
+        "description": "Placeholder for song title input"
+    },
     "songText": "The rest of your song",
+    "@songText": {
+        "description": "Placeholder for song lyrics/content input"
+    },
     "hasChorus": "With a Chorus",
+    "@hasChorus": {
+        "description": "Label for chorus toggle/checkbox"
+    },
     "verses": "Verse",
+    "@verses": {
+        "description": "Label for song verses"
+    },
     "addtoList": "Add to a List",
+    "@addtoList": {
+        "description": "Action to add song to a list"
+    },
     "addSongtoList": "Add this song to a List",
+    "@addSongtoList": {
+        "description": "Action description for adding song to list"
+    },
     "likeSong": "Like this song",
+    "@likeSong": {
+        "description": "Action to like/favorite a song"
+    },
     "editSong": "Edit this song",
+    "@editSong": {
+        "description": "Action to edit a song"
+    },
     "deleteSong": "Delete this song",
+    "@deleteSong": {
+        "description": "Action to delete a song"
+    },
     "copySong": "Copy this song",
+    "@copySong": {
+        "description": "Action to copy a song"
+    },
     "deleteList": "Delete this list",
+    "@deleteList": {
+        "description": "Action to delete a song list"
+    },
     "shareSong": "Share this song",
+    "@shareSong": {
+        "description": "Action to share a song"
+    },
     "songCopied": "song copied!",
+    "@songCopied": {
+        "description": "Success message when song is copied"
+    },
     "copyVerse": "Copy verse",
+    "@copyVerse": {
+        "description": "Action to copy a verse"
+    },
     "textCopied": " copied!",
+    "@textCopied": {
+        "description": "Success message when text is copied"
+    },
     "shareVerse": "Share verse",
+    "@shareVerse": {
+        "description": "Action to share a verse"
+    },
     "projectSong": "Project this Song",
+    "@projectSong": {
+        "description": "Action to project/present a song"
+    },
     "songLiked": "Song added to Favorites!",
+    "@songLiked": {
+        "description": "Success message when song is added to favorites"
+    },
     "songDisliked": "Song removed from Favorites!",
+    "@songDisliked": {
+        "description": "Message when song is removed from favorites"
+    },
     "songLike": "Add this Song to Favorites!",
+    "@songLike": {
+        "description": "Tooltip or label for like action"
+    },
     "songDislike": "Remove this Song from Favorites!",
+    "@songDislike": {
+        "description": "Tooltip or label for unlike action"
+    },
     "songAddedToList": " added to ",
+    "@songAddedToList": {
+        "description": "Success message when song is added to a list"
+    },
     "listCreated": "song list created!",
+    "@listCreated": {
+        "description": "Success message when list is created"
+    },
     "listUpdated": "song list updated!",
+    "@listUpdated": {
+        "description": "Success message when list is updated"
+    },
     "deleted": "deleted!",
+    "@deleted": {
+        "description": "Success message when item is deleted"
+    },
     "readyShare": "Ready for sharing",
+    "@readyShare": {
+        "description": "Message indicating content is ready to share"
+    },
     "screenshotVerse": "Screenshot verse",
+    "@screenshotVerse": {
+        "description": "Action to take screenshot of verse"
+    },
     "screenshoted": "We have your screenshot!",
+    "@screenshoted": {
+        "description": "Success message when screenshot is taken"
+    },
     "appSettings": "App Settings",
+    "@appSettings": {
+        "description": "Title for app settings section"
+    },
     "displayTitle": "Display",
+    "@displayTitle": {
+        "description": "Title for display settings section"
+    },
     "collectionTitle": "Your Collection",
+    "@collectionTitle": {
+        "description": "Title for user's collection section"
+    },
     "presentationTitle": "Song Presentation",
+    "@presentationTitle": {
+        "description": "Title for song presentation settings"
+    },
     "appTheme": "App Theme",
+    "@appTheme": {
+        "description": "Label for app theme setting"
+    },
     "appThemeDesc": "Current Theme:",
+    "@appThemeDesc": {
+        "description": "Description showing current theme"
+    },
     "reselectSongbooks": "Select Songbooks Afresh",
+    "@reselectSongbooks": {
+        "description": "Action to reselect songbooks"
+    },
     "reselectSongbooksDesc": "Restructure your collection once again",
+    "@reselectSongbooksDesc": {
+        "description": "Description for reselecting songbooks"
+    },
     "songPresentation": "Slide Scroll Direction",
+    "@songPresentation": {
+        "description": "Label for song presentation direction setting"
+    },
     "songPresentationDesc": "Song slides to scroll vertically",
+    "@songPresentationDesc": {
+        "description": "Description for song presentation direction"
+    },
     "chooseTheme": "Choose Theme",
+    "@chooseTheme": {
+        "description": "Title for theme selection dialog"
+    },
     "themeDefault": "System Default",
+    "@themeDefault": {
+        "description": "Option for system default theme"
+    },
     "themeLight": "Light",
+    "@themeLight": {
+        "description": "Option for light theme"
+    },
     "themeDark": "Dark",
+    "@themeDark": {
+        "description": "Option for dark theme"
+    },
     "okay": "Okay",
+    "@okay": {
+        "description": "Confirmation button text"
+    },
     "cancel": "Cancel",
+    "@cancel": {
+        "description": "Cancel button text"
+    },
     "openSettings": "Open Settings",
+    "@openSettings": {
+        "description": "Action to open app settings"
+    },
     "remind": "Remind Me Later",
+    "@remind": {
+        "description": "Button to postpone reminder"
+    },
     "donate": "Donate",
+    "@donate": {
+        "description": "Action to make donation"
+    },
     "proceed": "Proceed",
+    "@proceed": {
+        "description": "Action to continue/next"
+    },
     "justAMinute": "Just a minute!",
+    "@justAMinute": {
+        "description": "Attention-grabbing dialog title"
+    },
     "supportSongLib": "Support SongLib",
+    "@supportSongLib": {
+        "description": "Title for support/donation request"
+    },
     "notificationDialog": "Let's remind you",
+    "@notificationDialog": {
+        "description": "Title for reminder dialog"
+    },
     "noSongSelected": "No song item has been selected",
+    "@noSongSelected": {
+        "description": "Error message when no song is selected"
+    },
     "selectSongsAfresh": "Select Songs Afresh",
+    "@selectSongsAfresh": {
+        "description": "Action to select songs again"
+    },
     "problemDisplaySongs": "Oops there is a problem displaying songs under the book you selected.\n\nYou can fix the issue by selecting them afresh",
+    "@problemDisplaySongs": {
+        "description": "Error message when songs cannot be displayed"
+    },
     "donationRequest": "Donation Request",
+    "@donationRequest": {
+        "description": "Title for donation request"
+    },
     "donationRequestBody": "SongLib has a lot in the pipelines and will need your support to accomplish that.",
+    "@donationRequestBody": {
+        "description": "Body text for donation request"
+    },
     "doneSelecting": "Done with selecting?",
+    "@doneSelecting": {
+        "description": "Prompt to confirm selection completion"
+    },
     "doneSelectingBody": "If you are done selecting please proceed ahead. We can always bring you back here to reselect afresh.",
+    "@doneSelectingBody": {
+        "description": "Body text for selection completion prompt"
+    },
     "noSelection": "Oops! No selection found",
+    "@noSelection": {
+        "description": "Error message when no selection is made"
+    },
     "noSelectionBody": "Please select at least 1 book to proceed to the next step.",
+    "@noSelectionBody": {
+        "description": "Body text for no selection error"
+    },
     "errorOccurred": "Wueh! You weren't supposed to see this!",
+    "@errorOccurred": {
+        "description": "Title for unexpected error"
+    },
     "errorOccurredBody1": "An unexpected error occurred while trying to present the song to you. Please try again later or contact support",
+    "@errorOccurredBody1": {
+        "description": "Body text for song presentation error"
+    },
     "errorOccurredBody": "An unexpected error occurred while trying to fetch data from the server. Please try again later or contact support",
+    "@errorOccurredBody": {
+        "description": "Body text for server fetch error"
+    },
     "noConnection": "No internet connection!",
+    "@noConnection": {
+        "description": "Title for no internet connection error"
+    },
     "noConnectionBody": "If you have reliable internet connection, then it's our servers that are down or unaccessible.\n\nIf this situation persists, email us: futuristicken@gmail.com with a screenshot and your device info.",
+    "@noConnectionBody": {
+        "description": "Body text for connection error with support email"
+    },
     "itsEmptyHere": "Wueh! It's empty here",
+    "@itsEmptyHere": {
+        "description": "Empty state title for general sections"
+    },
     "itsEmptyHere1": "Wueh! No lists here yet",
+    "@itsEmptyHere1": {
+        "description": "Empty state title for lists section"
+    },
     "itsEmptyHereBody": "All caught here, do a selection of songs once again",
+    "@itsEmptyHereBody": {
+        "description": "Empty state body for song selection"
+    },
     "itsEmptyHereBody1": "All caught here, please like a song, search or view a song or better still add a custom list to clear this emptiness here",
+    "@itsEmptyHereBody1": {
+        "description": "Empty state body with suggestions for lists"
+    },
     "itsEmptyHereBody2": "All caught here, please add draft song to clear this emptiness here",
+    "@itsEmptyHereBody2": {
+        "description": "Empty state body for drafts section"
+    },
     "itsEmptyHereBody3": "All caught here, please like a song to clear this emptiness here",
+    "@itsEmptyHereBody3": {
+        "description": "Empty state body for favorites section"
+    },
     "itsEmptyHereBody4": "All caught here, you can add personal lists and add songs to them",
+    "@itsEmptyHereBody4": {
+        "description": "Empty state body with suggestion for personal lists"
+    },
     "keyboardShortcuts": "Keyboard Shortcuts",
+    "@keyboardShortcuts": {
+        "description": "Title for keyboard shortcuts section"
+    },
     "keyboardShortcutsTexts": "Letter   I - Show keyboard shortcuts \nESC Key - Exit from Song Presentation \n\nDOWN Arrow - Go to Next Verse \nUP  Arrow     - Go to Previous Verse \n\nLetter C - Go to the Song Chorus \nLetter S - Go to Second Last Verse \nLetter L - Go to Last Verse \n\nNumpad 1, 2, 3, 4, 5, 6, 7 - Go to the Verse by Number",
+    "@keyboardShortcutsTexts": {
+        "description": "List of keyboard shortcuts with descriptions"
+    },
     "hintsCurrentUpdate": "In this Latest Update",
+    "@hintsCurrentUpdate": {
+        "description": "Title for current update highlights"
+    },
     "hintsCurrentUpdateText": "1. Search without worrying about commas or exclamations \n2. Search with words not following each other by using a comma in between them \n\t\tE.g 'Jesus, sin' can be used to search the song 'Jesus paid it all'",
+    "@hintsCurrentUpdateText": {
+        "description": "Text describing new features in current update"
+    },
     "donationRequestReminder": "\n\nRemember to support our work with your donation from time to time.\nHead over to the Help Desk to Donate",
+    "@donationRequestReminder": {
+        "description": "Reminder text about supporting with donations"
+    },
     "availableBooks": "Here are the available books, please select as many as you like to proceed",
+    "@availableBooks": {
+        "description": "Instruction text for book selection"
+    },
     "nothingHere": "Sorry nothing to show here at the moment.",
+    "@nothingHere": {
+        "description": "Generic empty state message"
+    },
     "redirectingYou": "Redirecting you to select songs afresh",
+    "@redirectingYou": {
+        "description": "Message indicating redirection to song selection"
+    },
     "disabled": "Disabled",
+    "@disabled": {
+        "description": "Label for disabled state"
+    },
     "enabled": "Enabled",
+    "@enabled": {
+        "description": "Label for enabled state"
+    },
     "systemDefault": "System Default",
+    "@systemDefault": {
+        "description": "Label for system default option"
+    },
     "verticalSlide": "Vertical (Up, Down)",
+    "@verticalSlide": {
+        "description": "Option for vertical slide direction"
+    },
     "horizontalSlide": "Horizontal (Left, Right)",
+    "@horizontalSlide": {
+        "description": "Option for horizontal slide direction"
+    },
     "songbooksMgnt": "Songbooks Management",
+    "@songbooksMgnt": {
+        "description": "Title for songbooks management section"
+    },
     "songbooksMgntText": "Reselect your songbooks afresh",
+    "@songbooksMgntText": {
+        "description": "Description for songbooks management"
+    },
     "screenAwake": "Keep Screen On in Song View",
+    "@screenAwake": {
+        "description": "Setting to keep screen awake during song presentation"
+    },
     "slideDirection": "Song Slides Direction",
+    "@slideDirection": {
+        "description": "Label for slide direction setting"
+    },
     "setDirection": "Direction: {direction}",
     "@setDirection": {
-        "description": "A message with a single parameter",
+        "description": "Message showing current slide direction with parameter",
         "placeholders": {
             "direction": {
                 "type": "String",
-                "example": "Bob"
+                "example": "Vertical"
             }
         }
     },
     "themeMode": "Theme Mode",
-    "@themeMode": { "description": "" },
+    "@themeMode": {
+        "description": "Label for theme mode setting"
+    },
     "setTheme": "Theme: {theme}",
     "@setTheme": {
-    "description": "A message with a single parameter",
-    "placeholders": {
-    "theme": {
-    "type": "String",
-    "example": "Bob"
-    }
-    }
+        "description": "Message showing current theme with parameter",
+        "placeholders": {
+            "theme": {
+                "type": "String",
+                "example": "Dark"
+            }
+        }
     },
     "defaultMode": "Default",
+    "@defaultMode": {
+        "description": "Label for default mode"
+    },
     "lightMode": "Light",
+    "@lightMode": {
+        "description": "Label for light mode"
+    },
     "darkMode": "Dark",
+    "@darkMode": {
+        "description": "Label for dark mode"
+    },
 
     "labelError0": "An unknown error occured.",
+    "@labelError0": {
+        "description": "Generic unknown error message"
+    },
     "labelError404": "We're unable to connect you to our server at the moment.",
+    "@labelError404": {
+        "description": "Error message for 404 (not found) server error"
+    },
     "labelError500": "You're unable to connect to our server at the moment.",
+    "@labelError500": {
+        "description": "Error message for 500 (server) error"
+    },
     "labelError504": "Your request to our server has timed out.",
+    "@labelError504": {
+        "description": "Error message for 504 (timeout) error"
+    },
     "labelError999": "Our server returned an invalid response.",
+    "@labelError999": {
+        "description": "Error message for invalid server response"
+    },
     "labelError1000": "We're unable to submit your request.",
+    "@labelError1000": {
+        "description": "Error message for request submission failure"
+    },
 
     "labelFeedback0": "An unknown error occured.",
+    "@labelFeedback0": {
+        "description": "Generic unknown error for feedback"
+    },
     "labelFeedback404": "We can't connect you to our server at the moment due to a technical issue on our end. Please try connecting again, if the issue persists contact us on: thesonglibapp@gmail.com",
+    "@labelFeedback404": {
+        "description": "Detailed 404 error message with support contact for feedback"
+    },
     "labelFeedback500": "We can't connect you to our server at the moment due to a technical issue on your end. Please try switching to a reliable internet service and trying again. If the issue persists contact us on: thesonglibapp@gmail.com",
+    "@labelFeedback500": {
+        "description": "Detailed 500 error message with troubleshooting steps for feedback"
+    },
     "labelFeedback504": "Your request to our server has timed out.",
+    "@labelFeedback504": {
+        "description": "Timeout error message for feedback"
+    },
     "labelFeedback999": "Our server returned an invalid response.",
+    "@labelFeedback999": {
+        "description": "Invalid response error for feedback"
+    },
     "labelFeedback1000": "We're unable to submit your request.",
+    "@labelFeedback1000": {
+        "description": "Request submission failure for feedback"
+    },
 
     "labelPermissionTitle": "Permission Required",
+    "@labelPermissionTitle": {
+        "description": "Title for permission request dialog"
+    },
     "labelPermissionText": "This app requires this permissions to function properly.",
+    "@labelPermissionText": {
+        "description": "Explanation text for why permissions are needed"
+    },
 
-    "misc": "misc"
+    "misc": "misc",
+    "@misc": {
+        "description": "Miscellaneous category label"
+    }
 }

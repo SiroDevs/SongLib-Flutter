@@ -11,10 +11,10 @@ import '../../l10n/app_localizations.dart';
 import '../../widgets/list_items/search_book_item.dart';
 import '../../widgets/list_items/search_song_item.dart';
 import '../../theme/theme_styles.dart';
-import '../../blocs/home/home_bloc.dart';
+import '../../blocs/main/main_bloc.dart';
 import '../common/app_intents.dart';
 import '../common/search_songs_utils.dart';
-import '../home/home_screen.dart';
+import '../main/main_screen.dart';
 import '../presentor/ui/presentor_screen.dart';
 
 part 'widgets/song_viewer.dart';
@@ -35,7 +35,7 @@ class SongsScreen extends StatefulWidget {
 }
 
 class _SongsScreenState extends State<SongsScreen> {
-  late HomeBloc bloc;
+  late MainBloc bloc;
   late HomeScreenState parent;
   late FocusNode searchFocus;
   late TextEditingController searchController;
@@ -44,7 +44,7 @@ class _SongsScreenState extends State<SongsScreen> {
   void initState() {
     super.initState();
     parent = widget.parent;
-    bloc = context.read<HomeBloc>();
+    bloc = context.read<MainBloc>();
     searchFocus = FocusNode();
     searchController = TextEditingController();
   }

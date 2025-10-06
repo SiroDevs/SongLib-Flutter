@@ -5,6 +5,9 @@ class AuthState with _$AuthState {
   factory AuthState._({
     @Default(AuthStatus.unauthenticated) AuthStatus status,
   }) = _AuthState;
+  
+  @override
+  AuthStatus get status => AuthStatus.unauthenticated;
 }
 
 extension XAuthState on AuthState {

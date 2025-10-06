@@ -16,12 +16,12 @@ class SongViewer extends StatefulWidget {
 }
 
 class SongViewerState extends State<SongViewer> {
-  late HomeBloc bloc;
+  late MainBloc bloc;
 
   @override
   void initState() {
     super.initState();
-    bloc = context.read<HomeBloc>();
+    bloc = context.read<MainBloc>();
   }
 
   Future<void> onPresent() async {

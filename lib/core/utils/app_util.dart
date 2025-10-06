@@ -110,11 +110,7 @@ void getFrequencyParams(
 
 Future<bool> isKeyboardShowing(BuildContext context) async {
   // ignore: unnecessary_null_comparison
-  if (WidgetsBinding.instance != null) {
     return View.of(context).viewInsets.bottom > 0;
-  } else {
-    return false;
-  }
 }
 
 Future<void> closeKeyboard(BuildContext context) async {
@@ -142,9 +138,6 @@ String? textValidator(String? value) {
 
 bool isNumeric(String s) {
   // ignore: unnecessary_null_comparison
-  if (s == null) {
-    return false;
-  }
   return double.tryParse(s) != null;
 }
 
