@@ -3,18 +3,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../core/utils/app_util.dart';
+import '../../../core/di/injectable.dart';
+import '../../../core/utils/constants/pref_constants.dart';
 import '../../../data/repositories/database_repository.dart';
 import '../../../data/repositories/pref_repository.dart';
-import '../../../core/utils/constants/pref_constants.dart';
 import '../../l10n/app_localizations.dart';
-import '../../widgets/inputs/radio_input.dart';
-import '../../widgets/progress/custom_snackbar.dart';
-import '../../../core/di/injectable.dart';
 import '../../navigator/route_names.dart';
 import '../../theme/bloc/theme_bloc.dart';
 import '../../theme/theme_data.dart';
 import '../../theme/theme_fonts.dart';
 import '../../theme/theme_styles.dart';
+import '../../widgets/inputs/radio_input.dart';
+import '../../widgets/progress/custom_snackbar.dart';
+import 'settings_card.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -50,6 +51,34 @@ class SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     l10n = AppLocalizations.of(context)!;
+    final items = [
+      SettingCard(
+        icon: Icons.color_lens,
+        title: l10n.displayTitle,
+        subtitle: l10n.appTheme,
+        description: '${l10n.appThemeDesc} $appTheme',
+        onTap: () => selectThemeDialog(context),
+      ),
+      SettingCard(
+        icon: Icons.library_books,
+        title: l10n.collectionTitle,
+        subtitle: l10n.reselectSongbooks,
+        description: l10n.reselectSongbooksDesc,
+        onTap: onResetData,
+      ),
+      SettingCard(
+        icon: Icons.slideshow,
+        title: l10n.presentationTitle,
+        subtitle: l10n.songPresentation,
+        description: l10n.songPresentationDesc,
+        trailing: Switch(
+          value: slideVertical,
+          onChanged: (value) => updateSlideAxis(value),
+        ),
+        onTap: () => updateSlideAxis(!slideVertical),
+      ),
+    ];
+
     var widgets = [
       Text(
         l10n.displayTitle,
@@ -94,15 +123,15 @@ class SettingsScreenState extends State<SettingsScreen> {
     ];
     return Scaffold(
       appBar: AppBar(title: Text(l10n.appSettings)),
-      body: ListView.separated(
-        itemCount: widgets.length,
-        physics: const ClampingScrollPhysics(),
-        shrinkWrap: true,
-        separatorBuilder: (_, __) => const SizedBox(height: Sizes.xs),
+      body: GridView.builder(
         padding: const EdgeInsets.all(Sizes.sm),
-        itemBuilder: (context, index) {
-          return widgets[index];
-        },
+        physics: const ClampingScrollPhysics(),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          childAspectRatio: 4,
+        ),
+        itemCount: items.length,
+        itemBuilder: (_, index) => items[index],
       ),
     );
   }

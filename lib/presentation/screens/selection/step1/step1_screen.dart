@@ -1,14 +1,11 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 
 import '../../../../core/utils/app_util.dart';
 import '../../../../core/utils/constants/app_assets.dart';
-import '../../../../domain/entities/basic_model.dart';
 import '../../../../data/models/book.dart';
+import '../../../../domain/entities/basic_model.dart';
 import '../../../blocs/step1/step1_bloc.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../navigator/route_names.dart';
@@ -74,9 +71,7 @@ class Step1ScreenState extends State<Step1Screen> {
               title: Text(l10n.booksTitle),
               actions: [
                 IconButton(
-                  icon: Platform.isIOS
-                      ? Icon(CupertinoIcons.refresh)
-                      : Icon(Icons.refresh),
+                  icon: Icon(Icons.refresh),
                   onPressed: () => bloc.add(const FetchBooks()),
                 ),
               ],
@@ -84,6 +79,12 @@ class Step1ScreenState extends State<Step1Screen> {
             body: state.maybeWhen(
               orElse: () => SizedBox(),
               progress: () => const SelectionLoading(),
+              noInternet: () => EmptyState(
+                title: l10n.noConnection,
+                message: l10n.noConnectionBody,
+                showRetry: true,
+                onRetry: () => bloc.add(const FetchBooks()),
+              ),
               failure: (feedback) => EmptyState(
                 title: l10n.nothingHere,
                 showRetry: true,
@@ -92,7 +93,7 @@ class Step1ScreenState extends State<Step1Screen> {
               fetched: (selectedBooksIds, books, booksListing) {
                 var booksGridview = LayoutBuilder(
                   builder: (context, dimens) {
-                    final axisCount = (dimens.maxWidth / 450).round();
+                    final axisCount = (dimens.maxWidth / 400).round();
                     return GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: axisCount,

@@ -5,6 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../core/utils/app_util.dart';
 import '../../../core/utils/constants/pref_constants.dart';
+import '../../../core/utils/network_utils.dart';
 import '../../../data/models/song.dart';
 import '../../../data/repositories/database_repository.dart';
 import '../../../data/repositories/pref_repository.dart';
@@ -26,41 +27,40 @@ class Step2Bloc extends Bloc<Step2Event, Step2State> {
   final _prefRepo = getIt<PrefRepository>();
   final _dbRepo = getIt<DatabaseRepository>();
 
-  void _onFetchSongs(
-    FetchSongs event,
-    Emitter<Step2State> emit,
-  ) async {
+  void _onFetchSongs(FetchSongs event, Emitter<Step2State> emit) async {
     emit(Step2ProgressState());
-    String selectedBooks =
-        _prefRepo.getPrefString(PrefConstants.selectedBooksKey);
-    var resp = await _selectRepo.getSongsByBooks(selectedBooks);
+    if (await NetworkUtil.hasInternetConnection()) {
+      String selectedBooks = _prefRepo.getPrefString(
+        PrefConstants.selectedBooksKey,
+      );
+      var resp = await _selectRepo.getSongsByBooks(selectedBooks);
 
-    try {
-      switch (resp.statusCode) {
-        case 200:
-          List<dynamic> dataList = List<Map<String, dynamic>>.from(
-            jsonDecode(resp.body)['data'],
-          );
-          emit(
-            Step2FetchedState(
-              dataList.map((item) => Song.fromJson(item)).toList(),
-            ),
-          );
-          break;
-        default:
-          emit(Step2FailureState(resp.statusCode.toString()));
-          break;
+      try {
+        switch (resp.statusCode) {
+          case 200:
+            List<dynamic> dataList = List<Map<String, dynamic>>.from(
+              jsonDecode(resp.body),
+            );
+            emit(
+              Step2FetchedState(
+                dataList.map((item) => Song.fromJson(item)).toList(),
+              ),
+            );
+            break;
+          default:
+            emit(Step2FailureState(resp.statusCode.toString()));
+            break;
+        }
+      } catch (e) {
+        logger("Error log: $e");
+        emit(Step2FailureState('100'));
       }
-    } catch (e) {
-      logger("Error log: $e");
-      emit(Step2FailureState('100'));
+    } else {
+      emit(Step2NoInternetState());
     }
   }
 
-  void _onSaveSongs(
-    SaveSongs event,
-    Emitter<Step2State> emit,
-  ) async {
+  void _onSaveSongs(SaveSongs event, Emitter<Step2State> emit) async {
     emit(Step2ProgressState());
 
     if (event.songs.isNotEmpty) {
