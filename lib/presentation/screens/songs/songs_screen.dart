@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 import '../../../data/models/models.dart';
 import '../../../core/utils/app_util.dart';
+import '../../l10n/app_localizations.dart';
 import '../../widgets/list_items/search_book_item.dart';
 import '../../widgets/list_items/search_song_item.dart';
 import '../../theme/theme_styles.dart';

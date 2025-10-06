@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -13,6 +12,7 @@ import '../../../../core/utils/constants/pref_constants.dart';
 import '../../../../data/models/models.dart';
 import '../../../../data/repositories/pref_repository.dart';
 import '../../../blocs/presentor/presentor_bloc.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../widgets/action/fab_widget.dart';
 import '../../../widgets/presentor/slide_container.dart';
 import '../../../widgets/presentor/indicators.dart';

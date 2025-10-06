@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'core/auth/auth_bloc.dart';
-import 'domain/repositories/sync_repository.dart';
+import 'core/di/injectable.dart';
 import 'core/network/api_util.dart';
-import 'presentation/theme/bloc/theme_bloc.dart';
-import 'presentation/theme/theme_data.dart';
-import 'core/utils/constants/pref_constants.dart';
 import 'data/repositories/auth_repository.dart';
 import 'data/repositories/pref_repository.dart';
-import 'core/di/injectable.dart';
+import 'core/utils/constants/pref_constants.dart';
+import 'domain/repositories/sync_repository.dart';
+import 'presentation/l10n/app_localizations.dart';
 import 'presentation/navigator/main_navigator.dart';
 import 'presentation/navigator/route_names.dart';
+import 'presentation/theme/bloc/theme_bloc.dart';
+import 'presentation/theme/theme_data.dart';
 
 class MyApp extends StatefulWidget {
   final Widget? home;

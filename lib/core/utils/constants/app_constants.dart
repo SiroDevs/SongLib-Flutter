@@ -11,6 +11,7 @@ bool isMobile = Platform.isAndroid || Platform.isIOS || Platform.isFuchsia;
 
 class AppConstants {
   AppConstants._();
+  static const kFontFamily = 'TrebuchetMS';
   static String dbName = 'SongLib.db';
   static const String editsTable = 'edits';
   static const String draftsTable = 'drafts';

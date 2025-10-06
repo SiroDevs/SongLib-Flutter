@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/utils/app_util.dart';
 import '../../../../core/utils/constants/app_constants.dart';
 import '../../../blocs/step2/step2_bloc.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../navigator/route_names.dart';
 import '../../../widgets/progress/custom_snackbar.dart';
 import 'widgets/step2_widgets.dart';
