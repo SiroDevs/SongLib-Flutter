@@ -4,12 +4,12 @@ class ThemeColors {
   ThemeColors._();
   // General colors
   static const black2 = Color(0xFF202124);
-  static const grey = Color(0xB3000000); //black 70%
-  static const mediumGrey = Color(0x80000000); //black 50%
-  static const lightGrey = Color(0x33000000); //black 20%
+  static const grey = Color(0xB3000000);
+  static const mediumGrey = Color(0x80000000);
+  static const lightGrey = Color(0x33000000);
   static const backgroundGrey = Color(0xFFF1F2F3);
   static const disabledGrey = Color(0xFFE6E6E6);
-  static const shadow = Color(0x1e000000); //black 12%
+  static const shadow = Color(0x1e000000);
   static const error = Color(0xFFE30000);
 
   static const Color midGray = Color.fromARGB(255, 198, 198, 198);
@@ -25,8 +25,10 @@ class ThemeColors {
   static const primary = Color(0xFFB86918);
   static const primary1 = Color(0xFFF57C00);
   static const primary2 = Color(0xFFBF360C);
+  static const primary3 = Color(0xFF470C00);
   static const primaryDark = Color(0xFF432B25);
   static const primaryDark1 = Color(0xFF331900);
+  static const primaryDark2 = Color(0xFF1A0400);
   static const accent = Color(0xFFECECEC);
   static const accent1 = Color(0xFFEEDAC4);
   static const accent2 = Color(0xFFBEA264);
@@ -88,12 +90,6 @@ class ThemeColors {
     return Theme.of(context).brightness == Brightness.light
         ? ThemeColors.primaryDark
         : Colors.white;
-  }
-
-  static Color bgColorPrimary5(BuildContext context) {
-    return Theme.of(context).brightness == Brightness.light
-        ? Colors.white
-        : ThemeColors.primaryDark;
   }
 
   static Color bgColorAccent(BuildContext context) {

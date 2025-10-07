@@ -19,20 +19,14 @@ class BookItem extends StatelessWidget {
   final Selectable<Book> item;
   final Function()? onPressed;
 
-  const BookItem({
-    super.key,
-    required this.item,
-    this.onPressed,
-  });
+  const BookItem({super.key, required this.item, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    Color unSelectedColor = Theme.of(context).brightness == Brightness.light
-        ? Colors.white
-        : ThemeColors.primaryDark;
     return Card(
-      color:
-          item.isSelected ? ThemeColors.primary : unSelectedColor,
+      color: item.isSelected
+          ? ThemeColors.primary
+          : Theme.of(context).colorScheme.onInverseSurface,
       elevation: 5,
       child: Center(
         child: ListTile(
@@ -43,8 +37,8 @@ class BookItem extends StatelessWidget {
               item.isSelected
                   ? (Platform.isIOS ? Icons.check_circle : Icons.check_box)
                   : (Platform.isIOS
-                      ? Icons.radio_button_unchecked
-                      : Icons.check_box_outline_blank),
+                        ? Icons.radio_button_unchecked
+                        : Icons.check_box_outline_blank),
               color: item.isSelected
                   ? Colors.white
                   : ThemeColors.bgColorWB(context),

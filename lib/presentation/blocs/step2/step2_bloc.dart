@@ -103,10 +103,9 @@ class Step2Bloc extends Bloc<Step2Event, Step2State> {
           index++;
         } catch (_) {}
       }
+      _prefRepo.setPrefBool(PrefConstants.dataIsLoadedKey, true);
+      _prefRepo.setPrefBool(PrefConstants.wakeLockCheckKey, true);
     }
-
-    _prefRepo.setPrefBool(PrefConstants.dataIsLoadedKey, true);
-    _prefRepo.setPrefBool(PrefConstants.wakeLockCheckKey, true);
 
     emit(Step2SavedState());
   }

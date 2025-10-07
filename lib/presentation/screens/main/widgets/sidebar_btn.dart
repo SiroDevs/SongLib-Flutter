@@ -33,37 +33,42 @@ class SidebarBtn extends StatefulWidget {
 class SidebarBtnState extends State<SidebarBtn> {
   @override
   Widget build(BuildContext context) {
+    Color foreColor = Theme.of(context).colorScheme.onSurface;
+    Color hoverColor = Theme.of(context).colorScheme.outline;
+    Color fillColor = widget.isSelected
+        ? hoverColor
+        : Colors.transparent;
     TextStyle btnStyle = TextStyles.buttonTextStyle;
-    Widget btnContents = Row(
-      mainAxisAlignment:
-          widget.compact ? MainAxisAlignment.center : MainAxisAlignment.start,
-      children: <Widget>[
-        if (!widget.compact) const SizedBox(width: 10),
-        Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: Icon(
-            widget.icon,
-            size: widget.iconSize - 4.0,
-            color: widget.isSelected ? Colors.white : Colors.black,
-          ),
-        ),
-        if (!widget.compact) ...{
-          const SizedBox(width: 20),
-          Text(widget.label.toUpperCase(), style: btnStyle).flexible()
-        }
-      ],
-    )
-        .opacity(widget.isSelected ? 1 : .8, animate: true)
-        .animate(.3.seconds, Curves.easeOut);
+    Widget btnContents =
+        Row(
+              mainAxisAlignment: widget.compact
+                  ? MainAxisAlignment.center
+                  : MainAxisAlignment.start,
+              children: <Widget>[
+                if (!widget.compact) const SizedBox(width: 10),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Icon(
+                    widget.icon,
+                    size: widget.iconSize - 4.0,
+                    color: foreColor,
+                  ),
+                ),
+                if (!widget.compact) ...{
+                  const SizedBox(width: 20),
+                  Text(widget.label.toUpperCase(), style: btnStyle).flexible(),
+                },
+              ],
+            )
+            .opacity(widget.isSelected ? 1 : .8, animate: true)
+            .animate(.3.seconds, Curves.easeOut);
 
     return RawMaterialButton(
-      textStyle: TextStyles.buttonTextStyle.bold
-          .size(20)
-          .textColor(widget.isSelected ? Colors.white : Colors.black),
-      fillColor: widget.isSelected ? ThemeColors.primary : Colors.transparent,
+      textStyle: TextStyles.buttonTextStyle.bold.size(20).textColor(foreColor),
+      fillColor: fillColor,
       highlightColor: Colors.white.withValues(alpha: .1),
       focusElevation: 0,
-      hoverColor: ThemeColors.primary,
+      hoverColor: hoverColor,
       hoverElevation: 1,
       highlightElevation: 0,
       elevation: 0,

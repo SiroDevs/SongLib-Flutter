@@ -177,7 +177,7 @@
     "@screenshoted": {
         "description": "Success message when screenshot is taken"
     },
-    "appSettings": "App Settings",
+    "appSettings": "Settings",
     "@appSettings": {
         "description": "Title for app settings section"
     },

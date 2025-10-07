@@ -365,7 +365,7 @@ abstract class AppLocalizations {
   /// Title for app settings section
   ///
   /// In en, this message translates to:
-  /// **'App Settings'**
+  /// **'Settings'**
   String get appSettings;
 
   /// Title for display settings section

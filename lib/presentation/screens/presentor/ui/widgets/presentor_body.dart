@@ -52,7 +52,8 @@ class PresentorBodyState extends State<PresentorBody> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-              parent.songTitle + (isBigScreen ? ' - ${parent.songBook}' : '')),
+            parent.songTitle + (isBigScreen ? ' - ${parent.songBook}' : ''),
+          ),
           actions: [
             Tooltip(
               message: song.liked ? l10n.songDislike : l10n.songLike,
@@ -61,12 +62,11 @@ class PresentorBodyState extends State<PresentorBody> {
                 icon: Icon(song.liked ? Icons.favorite : Icons.favorite_border),
               ),
             ),
+            ThemeButton(),
+            SizedBox(width: 20),
           ],
         ),
-        body: PresentorDetails(
-          parent: parent,
-          isBigScreen: !isBigScreen,
-        ),
+        body: PresentorDetails(parent: parent, isBigScreen: !isBigScreen),
         floatingActionButton: isBigScreen
             ? const SizedBox.shrink()
             : PresentorFabWidget(song: song),
