@@ -26,23 +26,13 @@ class PresentorBloc extends Bloc<PresentorEvent, PresentorState> {
 
   final _dbRepo = getIt<DatabaseRepository>();
 
-  Future<void> _onLoadSong(
-    LoadSong event,
-    Emitter<PresentorState> emit,
-  ) async {
+  Future<void> _onLoadSong(LoadSong event, Emitter<PresentorState> emit) async {
     emit(PresentorProgressState());
     var presentor = await loadSong(event.song);
-    emit(PresentorLoadedState(
-      presentor.songVerses,
-      presentor.widgetTabs,
-      presentor.widgetContent,
-    ));
+    emit(PresentorLoadedState(presentor['tabs'], presentor['stanzas']));
   }
 
-  Future<void> _onLikeSong(
-    LikeSong event,
-    Emitter<PresentorState> emit,
-  ) async {
+  Future<void> _onLikeSong(LikeSong event, Emitter<PresentorState> emit) async {
     try {
       await _dbRepo.updateSong(
         event.song.rid,

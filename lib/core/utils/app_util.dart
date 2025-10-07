@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'dart:math';
 import 'dart:developer' as logging show log;
 
 import 'package:flutter/material.dart';
@@ -267,8 +266,4 @@ String songShareString(String title, String content) {
 
 String verseOfString(String number, int count) {
   return 'VERSE $number of $count';
-}
-
-double getFontSize(int characters, double height, double width) {
-  return sqrt((height * width) / characters);
 }

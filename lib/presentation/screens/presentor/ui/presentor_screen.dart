@@ -7,6 +7,7 @@ import 'package:window_manager/window_manager.dart';
 import '../../../../core/di/injectable.dart';
 import '../../../../core/utils/app_util.dart';
 import '../../../../core/utils/constants/pref_constants.dart';
+import '../../../../core/utils/font_utils.dart';
 import '../../../../data/models/models.dart';
 import '../../../../data/repositories/pref_repository.dart';
 import '../../../blocs/presentor/presentor_bloc.dart';
@@ -14,7 +15,6 @@ import '../../../l10n/app_localizations.dart';
 import '../../../widgets/action/fab_widget.dart';
 import '../../../widgets/presentor/slide_container.dart';
 import '../../../widgets/progress/custom_snackbar.dart';
-import '../../../widgets/progress/general_progress.dart';
 import '../../../theme/theme_colors.dart';
 import '../../common/app_intents.dart';
 import '../../common/theme_button.dart';
@@ -46,17 +46,12 @@ class PresentorScreenState extends State<PresentorScreen> {
   late SongExt song;
   late String songTitle, songBook;
   bool hasChorus = false, likeChanged = false, slideVertical = true;
-  List<String> songVerses = [];
-  List<Tab> widgetTabs = [];
-  List<Widget> widgetContent = [];
 
   @override
   void initState() {
     super.initState();
     song = widget.song;
-    if (song.content.contains("CHORUS")) {
-      hasChorus = true;
-    }
+    hasChorus = song.content.contains("CHORUS");
     songTitle = songItemTitle(song.songNo, widget.song.title);
     songBook = refineTitle(song.songbook);
     // setFullScreen(true);
@@ -73,7 +68,6 @@ class PresentorScreenState extends State<PresentorScreen> {
       song.liked = !song.liked;
       likeChanged = true;
     });
-
     String message = song.liked ? l10n.songLiked : l10n.songDisliked;
     CustomSnackbar.show(context, message, isSuccess: song.liked);
   }
@@ -102,47 +96,37 @@ class PresentorScreenState extends State<PresentorScreen> {
             } else {
               CustomSnackbar.show(context, l10n.songDisliked);
             }
-          } else if (state is PresentorLoadedState) {
-            setState(() {
-              songVerses = state.songVerses!;
-              widgetTabs = state.widgetTabs!;
-              widgetContent = state.widgetContent!;
-            });
           }
         },
         builder: (context, state) {
-          return state.maybeWhen(
-            progress: () => Scaffold(body: CircularProgress()),
-            orElse: () => PopScope(
-              canPop: false,
-              onPopInvokedWithResult: (bool didPop, dynamic result) async {
-                if (didPop) {
-                  return;
-                }
-                if (context.mounted) {
-                  Navigator.pop(context, likeChanged);
-                }
-              },
-              child: Scaffold(
-                appBar: AppBar(
-                  title: Text('$songTitle - $songBook'),
-                  actions: [
-                    Tooltip(
-                      message: song.liked ? l10n.songDislike : l10n.songLike,
-                      child: IconButton(
-                        onPressed: _toggleLike,
-                        icon: Icon(
-                          song.liked ? Icons.favorite : Icons.favorite_border,
-                        ),
+          return PopScope(
+            canPop: false,
+            onPopInvokedWithResult: (bool didPop, dynamic result) async {
+              if (didPop) {
+                return;
+              }
+              if (context.mounted) {
+                Navigator.pop(context, likeChanged);
+              }
+            },
+            child: Scaffold(
+              appBar: AppBar(
+                title: Text('$songTitle - $songBook'),
+                actions: [
+                  Tooltip(
+                    message: song.liked ? l10n.songDislike : l10n.songLike,
+                    child: IconButton(
+                      onPressed: _toggleLike,
+                      icon: Icon(
+                        song.liked ? Icons.favorite : Icons.favorite_border,
                       ),
                     ),
-                    ThemeButton(),
-                    SizedBox(width: 20),
-                  ],
-                ),
-                body: PresentorDetails(parent: this),
-                // floatingActionButton: PresentorFabWidget(song: song),
+                  ),
+                  ThemeButton(),
+                  SizedBox(width: 20),
+                ],
               ),
+              body: PresentorDetails(parent: this),
             ),
           );
         },

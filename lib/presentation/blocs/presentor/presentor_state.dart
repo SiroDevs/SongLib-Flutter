@@ -5,9 +5,8 @@ class PresentorState with _$PresentorState {
   const factory PresentorState.initial() = _PresentorState;
 
   const factory PresentorState.loaded(
-    List<String>? songVerses,
-    List<Tab>? widgetTabs,
-    List<Widget>? widgetContent,
+    List<Tab> tabs,
+    List<String> stanzas,
   ) = PresentorLoadedState;
 
   const factory PresentorState.progress() = PresentorProgressState;

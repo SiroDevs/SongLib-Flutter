@@ -2,11 +2,10 @@ part of '../presentor_screen.dart';
 
 class PresentorSlide extends StatefulWidget {
   final int? index;
-  final double? tabsWidth;
   final double? indicatorWidth;
   final IndicatorSide? indicatorSide;
   final List<Tab>? tabs;
-  final List<Widget>? contents;
+  final List<Widget>? slides;
   final String? songbook;
   final TextDirection? direction;
 
@@ -14,14 +13,13 @@ class PresentorSlide extends StatefulWidget {
     super.key,
     required this.index,
     required this.tabs,
-    required this.contents,
+    required this.slides,
     required this.songbook,
-    this.tabsWidth = 200,
     this.indicatorWidth = 3,
     this.indicatorSide,
     this.direction = TextDirection.ltr,
   }) : assert(
-         tabs != null && contents != null && tabs.length == contents.length,
+         tabs != null && slides != null && tabs.length == slides.length,
        );
 
   @override
@@ -106,7 +104,7 @@ class _PresentorSlideState extends State<PresentorSlide>
       scrollDirection: slideVertical ? Axis.vertical : Axis.horizontal,
       controller: pageController,
       physics: const AlwaysScrollableScrollPhysics(),
-      itemCount: widget.contents!.length,
+      itemCount: widget.slides!.length,
       onPageChanged: (index) {
         setState(() {
           if (changePageByTapView == false || changePageByTapView == null) {
@@ -117,7 +115,7 @@ class _PresentorSlideState extends State<PresentorSlide>
           }
         });
       },
-      itemBuilder: (context, index) => widget.contents![index],
+      itemBuilder: (context, index) => widget.slides![index],
     );
     var slideContainer = SlideContainer(
       tabs: widget.tabs!,

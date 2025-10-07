@@ -1,33 +1,25 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/utils/app_util.dart';
-
 class SliderContent extends StatelessWidget {
   final String lyrics;
+  final double fontSize;
   final Function()? onDoubleTap;
   final Function()? onLongPress;
 
   const SliderContent({
     super.key,
     required this.lyrics,
+    required this.fontSize,
     this.onDoubleTap,
     this.onLongPress,
   });
 
   @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    final double nfontsize = getFontSize(
-      lyrics.length + 20,
-      size.height - 500,
-      size.width,
-    );
-    
+  Widget build(BuildContext context) { 
     return GestureDetector(
       onDoubleTap: onDoubleTap,
       onLongPress: onLongPress,
-      child: Container(
-        height: size.height * 0.755,
+      child: Padding(
         padding: const EdgeInsets.all(10),
         child: Card(
           elevation: 5,
@@ -39,7 +31,7 @@ class SliderContent extends StatelessWidget {
                 lyrics.replaceAll("#", "\n"),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: nfontsize,
+                  fontSize: fontSize,
                 ),
               ),
             ),
@@ -51,12 +43,12 @@ class SliderContent extends StatelessWidget {
 }
 
 class SliderNumbers extends StatelessWidget {
-  final String info;
+  final String label;
   final double fontSize;
 
   const SliderNumbers({
     super.key,
-    required this.info,
+    required this.label,
     required this.fontSize,
   });
 
@@ -65,7 +57,7 @@ class SliderNumbers extends StatelessWidget {
     return Tab(
       child: Center(
         child: Text(
-          info,
+          label,
           style: TextStyle(
             fontSize: 25,
             color: Colors.white,
