@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,7 +13,6 @@ import '../../../blocs/presentor/presentor_bloc.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../widgets/action/fab_widget.dart';
 import '../../../widgets/presentor/slide_container.dart';
-import '../../../widgets/presentor/indicators.dart';
 import '../../../widgets/progress/custom_snackbar.dart';
 import '../../../widgets/progress/general_progress.dart';
 import '../../../theme/theme_colors.dart';
@@ -25,8 +22,7 @@ import '../common/presentor_utils.dart';
 import '../common/slide_utils.dart';
 
 part 'widgets/fab_widget.dart';
-part 'widgets/presentor_body.dart';
-part 'widgets/presentor_details.dart';
+part 'presentor_details.dart';
 part 'widgets/presentor_slide.dart';
 
 class PresentorScreen extends StatefulWidget {
@@ -63,17 +59,23 @@ class PresentorScreenState extends State<PresentorScreen> {
     }
     songTitle = songItemTitle(song.songNo, widget.song.title);
     songBook = refineTitle(song.songbook);
-    if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-      setFullScreen(true);
-    }
+    // setFullScreen(true);
   }
 
   @override
   void dispose() {
-    if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-      setFullScreen(false);
-    }
+    setFullScreen(false);
     super.dispose();
+  }
+
+  void _toggleLike() {
+    setState(() {
+      song.liked = !song.liked;
+      likeChanged = true;
+    });
+
+    String message = song.liked ? l10n.songLiked : l10n.songDisliked;
+    CustomSnackbar.show(context, message, isSuccess: song.liked);
   }
 
   Future<void> setFullScreen(bool value) async {
@@ -89,10 +91,7 @@ class PresentorScreenState extends State<PresentorScreen> {
       child: BlocConsumer<PresentorBloc, PresentorState>(
         listener: (context, state) {
           if (state is PresentorFailureState) {
-            CustomSnackbar.show(
-              context,
-              feedbackMessage(state.feedback, l10n),
-            );
+            CustomSnackbar.show(context, feedbackMessage(state.feedback, l10n));
           } else if (state is PresentorLikedState) {
             setState(() {
               song.liked = !song.liked;
@@ -114,7 +113,37 @@ class PresentorScreenState extends State<PresentorScreen> {
         builder: (context, state) {
           return state.maybeWhen(
             progress: () => Scaffold(body: CircularProgress()),
-            orElse: () => PresentorBody(parent: this),
+            orElse: () => PopScope(
+              canPop: false,
+              onPopInvokedWithResult: (bool didPop, dynamic result) async {
+                if (didPop) {
+                  return;
+                }
+                if (context.mounted) {
+                  Navigator.pop(context, likeChanged);
+                }
+              },
+              child: Scaffold(
+                appBar: AppBar(
+                  title: Text('$songTitle - $songBook'),
+                  actions: [
+                    Tooltip(
+                      message: song.liked ? l10n.songDislike : l10n.songLike,
+                      child: IconButton(
+                        onPressed: _toggleLike,
+                        icon: Icon(
+                          song.liked ? Icons.favorite : Icons.favorite_border,
+                        ),
+                      ),
+                    ),
+                    ThemeButton(),
+                    SizedBox(width: 20),
+                  ],
+                ),
+                body: PresentorDetails(parent: this),
+                // floatingActionButton: PresentorFabWidget(song: song),
+              ),
+            ),
           );
         },
       ),

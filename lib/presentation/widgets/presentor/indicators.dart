@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/theme_colors.dart';
-import '../../theme/theme_styles.dart';
 
 class PresentorIndicator extends StatelessWidget {
   final double? width;
@@ -77,30 +76,6 @@ class IndicatorItem extends StatelessWidget {
         ),
         alignment: alignment,
         child: child,
-      ),
-    );
-  }
-}
-
-class PresentorSongBook extends StatelessWidget {
-  final String songbook;
-  final double tabsWidth;
-
-  const PresentorSongBook(
-      {super.key, required this.songbook, required this.tabsWidth});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.all(Sizes.l),
-      child: Text(
-        songbook,
-        style: TextStyle(
-          fontSize: tabsWidth / 2.5,
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-        ),
       ),
     );
   }
