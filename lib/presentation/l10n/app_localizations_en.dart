@@ -141,7 +141,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get screenshoted => 'We have your screenshot!';
 
   @override
-  String get appSettings => 'App Settings';
+  String get appSettings => 'Settings';
 
   @override
   String get displayTitle => 'Display';

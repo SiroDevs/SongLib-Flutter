@@ -1,85 +1,87 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
-//import 'package:share_plus/share_plus.dart';
 
 import '../../../../core/utils/app_util.dart';
 import '../../../../core/utils/constants/app_constants.dart';
-import '../../../widgets/presentor/presentor.dart';
 import '../../../../data/models/songext.dart';
-import '../models/presentor_model.dart';
+import '../../../widgets/presentor/presentor.dart';
 
-Future<PresentorModel> loadSong(SongExt song) async {
-  PresentorModel? presentor;
+Future<Map<String, dynamic>> loadSong(SongExt song) async {
+  var hasChorus = false;
+  List<Tab> tabs = [];
+  List<String> labels = [];
+  List<String> stanzas = [];
+
   try {
-    var hasChorus = false;
-    List<Tab> widgetTabs = [];
-    List<Widget> widgetContent = [];
-    var verseInfos = [], verseTexts = [];
-
-    var songBook = refineTitle(song.songbook);
-    var songTitle = songItemTitle(song.songNo, song.title);
-
-    var songVerses = song.content.split("##");
-    final int verseCount = songVerses.length;
+    var verses = song.content.split("##");
+    final int verseCount = verses.length;
 
     if (song.content.contains("CHORUS")) {
       hasChorus = true;
     }
 
     if (hasChorus) {
-      final String chorus = songVerses[1].toString().replaceAll("CHORUS#", "");
+      final String chorus = verses[1].replaceAll("CHORUS#", "");
 
-      verseInfos.add("1");
-      verseInfos.add("C");
-      verseTexts.add(songVerses[0]);
-      verseTexts.add(chorus);
+      labels.add("1");
+      labels.add("C");
+      stanzas.add(verses[0]);
+      stanzas.add(chorus);
 
       for (int i = 2; i < verseCount; i++) {
-        verseInfos.add(i.toString());
-        verseInfos.add("C");
-        verseTexts.add(songVerses[i]);
-        verseTexts.add(chorus);
+        labels.add(i.toString());
+        labels.add("C");
+        stanzas.add(verses[i]);
+        stanzas.add(chorus);
       }
     } else {
       for (int i = 0; i < verseCount; i++) {
-        verseInfos.add((i + 1).toString());
-        verseTexts.add(songVerses[i]);
+        labels.add((i + 1).toString());
+        stanzas.add(verses[i]);
       }
     }
 
-    for (final verse in verseInfos) {
-      widgetTabs.add(
+    for (final label in labels) {
+      tabs.add(
         Tab(
-          child: SliderNumbers(
-            info: verse,
-            fontSize: 0.5 * .75,
-          ),
+          child: SliderNumbers(label: label, fontSize: 0.5 * .75),
         ),
       );
     }
-    for (final verse in verseTexts) {
-      widgetContent.add(SliderContent(
-        lyrics: verse,
-        onDoubleTap: () => Share.share(
-          '${verse.replaceAll("#", "\n")}\n\n$songTitle,\n$songBook',
-          subject: 'Share verse',
-        ),
-        //onLongPress: () => copyVerse(verse),
-      ));
-    }
-    presentor = PresentorModel(
-      hasChorus: hasChorus,
-      songBook: songBook,
-      songTitle: songTitle,
-      songVerses: songVerses,
-      widgetTabs: widgetTabs,
-      widgetContent: widgetContent,
-    );
+
+    return {'tabs': tabs, 'stanzas': stanzas};
   } catch (e) {
-    //
+    return {'tabs': [], 'stanzas': []};
   }
-  return presentor!;
+}
+
+List<Widget> presentorWidgets(
+  String title,
+  String book,
+  double fontSize,
+  List<String> stanzas,
+) {
+  try {
+    List<Widget> slides = [];
+    for (final stanza in stanzas) {
+      slides.add(
+        SliderContent(
+          lyrics: stanza,
+          fontSize: fontSize,
+          onDoubleTap: () => Share.share(
+            '${stanza.replaceAll("#", "\n")}\n\n$title,\n$book',
+            subject: 'Share verse',
+          ),
+          //onLongPress: () => copyVerse(verse),
+        ),
+      );
+    }
+
+    return slides;
+  } catch (e) {
+    return [];
+  }
 }
 
 String getSongContent(SongExt song) {
@@ -102,9 +104,9 @@ Future<void> shareSong(SongExt song) async {
 
 Future<void> copySong(SongExt song) async {
   try {
-    await Clipboard.setData(ClipboardData(
-      text: getSongContent(song) + AppConstants.fromApp,
-    ));
+    await Clipboard.setData(
+      ClipboardData(text: getSongContent(song) + AppConstants.fromApp),
+    );
     /*showToast(
       text: '${song.title} copied!',
       state: ToastStates.success,
@@ -118,7 +120,8 @@ Future<void> copyVerse(String songTitle, String songBook, String lyrics) async {
   try {
     await Clipboard.setData(
       ClipboardData(
-        text: '${lyrics.replaceAll("#", "\n")}'
+        text:
+            '${lyrics.replaceAll("#", "\n")}'
             '\n\n$songTitle,\n$songBook',
       ),
     );

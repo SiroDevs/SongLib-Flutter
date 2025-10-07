@@ -98,757 +98,757 @@ abstract class AppLocalizations {
     Locale('sw'),
   ];
 
-  /// No description provided for @feedback.
+  /// Label for feedback section or button
   ///
   /// In en, this message translates to:
   /// **'Feedback'**
   String get feedback;
 
-  /// No description provided for @appName.
+  /// The name of the application
   ///
   /// In en, this message translates to:
   /// **'SongLib'**
   String get appName;
 
-  /// No description provided for @listTitle.
+  /// Title for song lists section
   ///
   /// In en, this message translates to:
   /// **'Song Lists'**
   String get listTitle;
 
-  /// No description provided for @searchTitle.
+  /// Title for search songs section
   ///
   /// In en, this message translates to:
   /// **'Search Songs'**
   String get searchTitle;
 
-  /// No description provided for @likesTitle.
+  /// Title for liked songs section
   ///
   /// In en, this message translates to:
   /// **'Liked Songs'**
   String get likesTitle;
 
-  /// No description provided for @historiesTitle.
+  /// Title for song history section
   ///
   /// In en, this message translates to:
   /// **'Histories'**
   String get historiesTitle;
 
-  /// No description provided for @draftTitle.
+  /// Title for song drafts section
   ///
   /// In en, this message translates to:
   /// **'Song Drafts'**
   String get draftTitle;
 
-  /// No description provided for @settingsTitle.
+  /// Title for settings section
   ///
   /// In en, this message translates to:
   /// **'Settings'**
   String get settingsTitle;
 
-  /// No description provided for @helpdeskTitle.
+  /// Title for help desk section
   ///
   /// In en, this message translates to:
   /// **'Help Desk'**
   String get helpdeskTitle;
 
-  /// No description provided for @donateTitle.
+  /// Title for donation information section
   ///
   /// In en, this message translates to:
   /// **'How to Donate'**
   String get donateTitle;
 
-  /// No description provided for @merchandiseTitle.
+  /// Title for merchandise section
   ///
   /// In en, this message translates to:
   /// **'Buy our Merchandise'**
   String get merchandiseTitle;
 
-  /// No description provided for @booksTitle.
+  /// Title for song book selection
   ///
   /// In en, this message translates to:
   /// **'Select Song Books'**
   String get booksTitle;
 
-  /// No description provided for @booksTitleLoading.
+  /// Loading message while fetching song books data
   ///
   /// In en, this message translates to:
   /// **'Loading data ...'**
   String get booksTitleLoading;
 
-  /// No description provided for @homeTitle.
+  /// Title for home section
   ///
   /// In en, this message translates to:
   /// **'Home'**
   String get homeTitle;
 
-  /// No description provided for @listedTitle.
+  /// Title for adding new song list
   ///
   /// In en, this message translates to:
   /// **'Adding a new list'**
   String get listedTitle;
 
-  /// No description provided for @editorTitle.
+  /// Title for song drafting/editing screen
   ///
   /// In en, this message translates to:
   /// **'Drafting a new song'**
   String get editorTitle;
 
-  /// No description provided for @songTitle.
+  /// Placeholder for song title input
   ///
   /// In en, this message translates to:
   /// **'Your song in one line'**
   String get songTitle;
 
-  /// No description provided for @songText.
+  /// Placeholder for song lyrics/content input
   ///
   /// In en, this message translates to:
   /// **'The rest of your song'**
   String get songText;
 
-  /// No description provided for @hasChorus.
+  /// Label for chorus toggle/checkbox
   ///
   /// In en, this message translates to:
   /// **'With a Chorus'**
   String get hasChorus;
 
-  /// No description provided for @verses.
+  /// Label for song verses
   ///
   /// In en, this message translates to:
   /// **'Verse'**
   String get verses;
 
-  /// No description provided for @addtoList.
+  /// Action to add song to a list
   ///
   /// In en, this message translates to:
   /// **'Add to a List'**
   String get addtoList;
 
-  /// No description provided for @addSongtoList.
+  /// Action description for adding song to list
   ///
   /// In en, this message translates to:
   /// **'Add this song to a List'**
   String get addSongtoList;
 
-  /// No description provided for @likeSong.
+  /// Action to like/favorite a song
   ///
   /// In en, this message translates to:
   /// **'Like this song'**
   String get likeSong;
 
-  /// No description provided for @editSong.
+  /// Action to edit a song
   ///
   /// In en, this message translates to:
   /// **'Edit this song'**
   String get editSong;
 
-  /// No description provided for @deleteSong.
+  /// Action to delete a song
   ///
   /// In en, this message translates to:
   /// **'Delete this song'**
   String get deleteSong;
 
-  /// No description provided for @copySong.
+  /// Action to copy a song
   ///
   /// In en, this message translates to:
   /// **'Copy this song'**
   String get copySong;
 
-  /// No description provided for @deleteList.
+  /// Action to delete a song list
   ///
   /// In en, this message translates to:
   /// **'Delete this list'**
   String get deleteList;
 
-  /// No description provided for @shareSong.
+  /// Action to share a song
   ///
   /// In en, this message translates to:
   /// **'Share this song'**
   String get shareSong;
 
-  /// No description provided for @songCopied.
+  /// Success message when song is copied
   ///
   /// In en, this message translates to:
   /// **'song copied!'**
   String get songCopied;
 
-  /// No description provided for @copyVerse.
+  /// Action to copy a verse
   ///
   /// In en, this message translates to:
   /// **'Copy verse'**
   String get copyVerse;
 
-  /// No description provided for @textCopied.
+  /// Success message when text is copied
   ///
   /// In en, this message translates to:
   /// **' copied!'**
   String get textCopied;
 
-  /// No description provided for @shareVerse.
+  /// Action to share a verse
   ///
   /// In en, this message translates to:
   /// **'Share verse'**
   String get shareVerse;
 
-  /// No description provided for @projectSong.
+  /// Action to project/present a song
   ///
   /// In en, this message translates to:
   /// **'Project this Song'**
   String get projectSong;
 
-  /// No description provided for @songLiked.
+  /// Success message when song is added to favorites
   ///
   /// In en, this message translates to:
   /// **'Song added to Favorites!'**
   String get songLiked;
 
-  /// No description provided for @songDisliked.
+  /// Message when song is removed from favorites
   ///
   /// In en, this message translates to:
   /// **'Song removed from Favorites!'**
   String get songDisliked;
 
-  /// No description provided for @songLike.
+  /// Tooltip or label for like action
   ///
   /// In en, this message translates to:
   /// **'Add this Song to Favorites!'**
   String get songLike;
 
-  /// No description provided for @songDislike.
+  /// Tooltip or label for unlike action
   ///
   /// In en, this message translates to:
   /// **'Remove this Song from Favorites!'**
   String get songDislike;
 
-  /// No description provided for @songAddedToList.
+  /// Success message when song is added to a list
   ///
   /// In en, this message translates to:
   /// **' added to '**
   String get songAddedToList;
 
-  /// No description provided for @listCreated.
+  /// Success message when list is created
   ///
   /// In en, this message translates to:
   /// **'song list created!'**
   String get listCreated;
 
-  /// No description provided for @listUpdated.
+  /// Success message when list is updated
   ///
   /// In en, this message translates to:
   /// **'song list updated!'**
   String get listUpdated;
 
-  /// No description provided for @deleted.
+  /// Success message when item is deleted
   ///
   /// In en, this message translates to:
   /// **'deleted!'**
   String get deleted;
 
-  /// No description provided for @readyShare.
+  /// Message indicating content is ready to share
   ///
   /// In en, this message translates to:
   /// **'Ready for sharing'**
   String get readyShare;
 
-  /// No description provided for @screenshotVerse.
+  /// Action to take screenshot of verse
   ///
   /// In en, this message translates to:
   /// **'Screenshot verse'**
   String get screenshotVerse;
 
-  /// No description provided for @screenshoted.
+  /// Success message when screenshot is taken
   ///
   /// In en, this message translates to:
   /// **'We have your screenshot!'**
   String get screenshoted;
 
-  /// No description provided for @appSettings.
+  /// Title for app settings section
   ///
   /// In en, this message translates to:
-  /// **'App Settings'**
+  /// **'Settings'**
   String get appSettings;
 
-  /// No description provided for @displayTitle.
+  /// Title for display settings section
   ///
   /// In en, this message translates to:
   /// **'Display'**
   String get displayTitle;
 
-  /// No description provided for @collectionTitle.
+  /// Title for user's collection section
   ///
   /// In en, this message translates to:
   /// **'Your Collection'**
   String get collectionTitle;
 
-  /// No description provided for @presentationTitle.
+  /// Title for song presentation settings
   ///
   /// In en, this message translates to:
   /// **'Song Presentation'**
   String get presentationTitle;
 
-  /// No description provided for @appTheme.
+  /// Label for app theme setting
   ///
   /// In en, this message translates to:
   /// **'App Theme'**
   String get appTheme;
 
-  /// No description provided for @appThemeDesc.
+  /// Description showing current theme
   ///
   /// In en, this message translates to:
   /// **'Current Theme:'**
   String get appThemeDesc;
 
-  /// No description provided for @reselectSongbooks.
+  /// Action to reselect songbooks
   ///
   /// In en, this message translates to:
   /// **'Select Songbooks Afresh'**
   String get reselectSongbooks;
 
-  /// No description provided for @reselectSongbooksDesc.
+  /// Description for reselecting songbooks
   ///
   /// In en, this message translates to:
   /// **'Restructure your collection once again'**
   String get reselectSongbooksDesc;
 
-  /// No description provided for @songPresentation.
+  /// Label for song presentation direction setting
   ///
   /// In en, this message translates to:
   /// **'Slide Scroll Direction'**
   String get songPresentation;
 
-  /// No description provided for @songPresentationDesc.
+  /// Description for song presentation direction
   ///
   /// In en, this message translates to:
   /// **'Song slides to scroll vertically'**
   String get songPresentationDesc;
 
-  /// No description provided for @chooseTheme.
+  /// Title for theme selection dialog
   ///
   /// In en, this message translates to:
   /// **'Choose Theme'**
   String get chooseTheme;
 
-  /// No description provided for @themeDefault.
+  /// Option for system default theme
   ///
   /// In en, this message translates to:
   /// **'System Default'**
   String get themeDefault;
 
-  /// No description provided for @themeLight.
+  /// Option for light theme
   ///
   /// In en, this message translates to:
   /// **'Light'**
   String get themeLight;
 
-  /// No description provided for @themeDark.
+  /// Option for dark theme
   ///
   /// In en, this message translates to:
   /// **'Dark'**
   String get themeDark;
 
-  /// No description provided for @okay.
+  /// Confirmation button text
   ///
   /// In en, this message translates to:
   /// **'Okay'**
   String get okay;
 
-  /// No description provided for @cancel.
+  /// Cancel button text
   ///
   /// In en, this message translates to:
   /// **'Cancel'**
   String get cancel;
 
-  /// No description provided for @openSettings.
+  /// Action to open app settings
   ///
   /// In en, this message translates to:
   /// **'Open Settings'**
   String get openSettings;
 
-  /// No description provided for @remind.
+  /// Button to postpone reminder
   ///
   /// In en, this message translates to:
   /// **'Remind Me Later'**
   String get remind;
 
-  /// No description provided for @donate.
+  /// Action to make donation
   ///
   /// In en, this message translates to:
   /// **'Donate'**
   String get donate;
 
-  /// No description provided for @proceed.
+  /// Action to continue/next
   ///
   /// In en, this message translates to:
   /// **'Proceed'**
   String get proceed;
 
-  /// No description provided for @justAMinute.
+  /// Attention-grabbing dialog title
   ///
   /// In en, this message translates to:
   /// **'Just a minute!'**
   String get justAMinute;
 
-  /// No description provided for @supportSongLib.
+  /// Title for support/donation request
   ///
   /// In en, this message translates to:
   /// **'Support SongLib'**
   String get supportSongLib;
 
-  /// No description provided for @notificationDialog.
+  /// Title for reminder dialog
   ///
   /// In en, this message translates to:
   /// **'Let\'s remind you'**
   String get notificationDialog;
 
-  /// No description provided for @noSongSelected.
+  /// Error message when no song is selected
   ///
   /// In en, this message translates to:
   /// **'No song item has been selected'**
   String get noSongSelected;
 
-  /// No description provided for @selectSongsAfresh.
+  /// Action to select songs again
   ///
   /// In en, this message translates to:
   /// **'Select Songs Afresh'**
   String get selectSongsAfresh;
 
-  /// No description provided for @problemDisplaySongs.
+  /// Error message when songs cannot be displayed
   ///
   /// In en, this message translates to:
   /// **'Oops there is a problem displaying songs under the book you selected.\n\nYou can fix the issue by selecting them afresh'**
   String get problemDisplaySongs;
 
-  /// No description provided for @donationRequest.
+  /// Title for donation request
   ///
   /// In en, this message translates to:
   /// **'Donation Request'**
   String get donationRequest;
 
-  /// No description provided for @donationRequestBody.
+  /// Body text for donation request
   ///
   /// In en, this message translates to:
   /// **'SongLib has a lot in the pipelines and will need your support to accomplish that.'**
   String get donationRequestBody;
 
-  /// No description provided for @doneSelecting.
+  /// Prompt to confirm selection completion
   ///
   /// In en, this message translates to:
   /// **'Done with selecting?'**
   String get doneSelecting;
 
-  /// No description provided for @doneSelectingBody.
+  /// Body text for selection completion prompt
   ///
   /// In en, this message translates to:
   /// **'If you are done selecting please proceed ahead. We can always bring you back here to reselect afresh.'**
   String get doneSelectingBody;
 
-  /// No description provided for @noSelection.
+  /// Error message when no selection is made
   ///
   /// In en, this message translates to:
   /// **'Oops! No selection found'**
   String get noSelection;
 
-  /// No description provided for @noSelectionBody.
+  /// Body text for no selection error
   ///
   /// In en, this message translates to:
   /// **'Please select at least 1 book to proceed to the next step.'**
   String get noSelectionBody;
 
-  /// No description provided for @errorOccurred.
+  /// Title for unexpected error
   ///
   /// In en, this message translates to:
   /// **'Wueh! You weren\'t supposed to see this!'**
   String get errorOccurred;
 
-  /// No description provided for @errorOccurredBody1.
+  /// Body text for song presentation error
   ///
   /// In en, this message translates to:
   /// **'An unexpected error occurred while trying to present the song to you. Please try again later or contact support'**
   String get errorOccurredBody1;
 
-  /// No description provided for @errorOccurredBody.
+  /// Body text for server fetch error
   ///
   /// In en, this message translates to:
   /// **'An unexpected error occurred while trying to fetch data from the server. Please try again later or contact support'**
   String get errorOccurredBody;
 
-  /// No description provided for @noConnection.
+  /// Title for no internet connection error
   ///
   /// In en, this message translates to:
   /// **'No internet connection!'**
   String get noConnection;
 
-  /// No description provided for @noConnectionBody.
+  /// Body text for connection error with support email
   ///
   /// In en, this message translates to:
   /// **'If you have reliable internet connection, then it\'s our servers that are down or unaccessible.\n\nIf this situation persists, email us: futuristicken@gmail.com with a screenshot and your device info.'**
   String get noConnectionBody;
 
-  /// No description provided for @itsEmptyHere.
+  /// Empty state title for general sections
   ///
   /// In en, this message translates to:
   /// **'Wueh! It\'s empty here'**
   String get itsEmptyHere;
 
-  /// No description provided for @itsEmptyHere1.
+  /// Empty state title for lists section
   ///
   /// In en, this message translates to:
   /// **'Wueh! No lists here yet'**
   String get itsEmptyHere1;
 
-  /// No description provided for @itsEmptyHereBody.
+  /// Empty state body for song selection
   ///
   /// In en, this message translates to:
   /// **'All caught here, do a selection of songs once again'**
   String get itsEmptyHereBody;
 
-  /// No description provided for @itsEmptyHereBody1.
+  /// Empty state body with suggestions for lists
   ///
   /// In en, this message translates to:
   /// **'All caught here, please like a song, search or view a song or better still add a custom list to clear this emptiness here'**
   String get itsEmptyHereBody1;
 
-  /// No description provided for @itsEmptyHereBody2.
+  /// Empty state body for drafts section
   ///
   /// In en, this message translates to:
   /// **'All caught here, please add draft song to clear this emptiness here'**
   String get itsEmptyHereBody2;
 
-  /// No description provided for @itsEmptyHereBody3.
+  /// Empty state body for favorites section
   ///
   /// In en, this message translates to:
   /// **'All caught here, please like a song to clear this emptiness here'**
   String get itsEmptyHereBody3;
 
-  /// No description provided for @itsEmptyHereBody4.
+  /// Empty state body with suggestion for personal lists
   ///
   /// In en, this message translates to:
   /// **'All caught here, you can add personal lists and add songs to them'**
   String get itsEmptyHereBody4;
 
-  /// No description provided for @keyboardShortcuts.
+  /// Title for keyboard shortcuts section
   ///
   /// In en, this message translates to:
   /// **'Keyboard Shortcuts'**
   String get keyboardShortcuts;
 
-  /// No description provided for @keyboardShortcutsTexts.
+  /// List of keyboard shortcuts with descriptions
   ///
   /// In en, this message translates to:
   /// **'Letter   I - Show keyboard shortcuts \nESC Key - Exit from Song Presentation \n\nDOWN Arrow - Go to Next Verse \nUP  Arrow     - Go to Previous Verse \n\nLetter C - Go to the Song Chorus \nLetter S - Go to Second Last Verse \nLetter L - Go to Last Verse \n\nNumpad 1, 2, 3, 4, 5, 6, 7 - Go to the Verse by Number'**
   String get keyboardShortcutsTexts;
 
-  /// No description provided for @hintsCurrentUpdate.
+  /// Title for current update highlights
   ///
   /// In en, this message translates to:
   /// **'In this Latest Update'**
   String get hintsCurrentUpdate;
 
-  /// No description provided for @hintsCurrentUpdateText.
+  /// Text describing new features in current update
   ///
   /// In en, this message translates to:
   /// **'1. Search without worrying about commas or exclamations \n2. Search with words not following each other by using a comma in between them \n\t\tE.g \'Jesus, sin\' can be used to search the song \'Jesus paid it all\''**
   String get hintsCurrentUpdateText;
 
-  /// No description provided for @donationRequestReminder.
+  /// Reminder text about supporting with donations
   ///
   /// In en, this message translates to:
   /// **'\n\nRemember to support our work with your donation from time to time.\nHead over to the Help Desk to Donate'**
   String get donationRequestReminder;
 
-  /// No description provided for @availableBooks.
+  /// Instruction text for book selection
   ///
   /// In en, this message translates to:
   /// **'Here are the available books, please select as many as you like to proceed'**
   String get availableBooks;
 
-  /// No description provided for @nothingHere.
+  /// Generic empty state message
   ///
   /// In en, this message translates to:
   /// **'Sorry nothing to show here at the moment.'**
   String get nothingHere;
 
-  /// No description provided for @redirectingYou.
+  /// Message indicating redirection to song selection
   ///
   /// In en, this message translates to:
   /// **'Redirecting you to select songs afresh'**
   String get redirectingYou;
 
-  /// No description provided for @disabled.
+  /// Label for disabled state
   ///
   /// In en, this message translates to:
   /// **'Disabled'**
   String get disabled;
 
-  /// No description provided for @enabled.
+  /// Label for enabled state
   ///
   /// In en, this message translates to:
   /// **'Enabled'**
   String get enabled;
 
-  /// No description provided for @systemDefault.
+  /// Label for system default option
   ///
   /// In en, this message translates to:
   /// **'System Default'**
   String get systemDefault;
 
-  /// No description provided for @verticalSlide.
+  /// Option for vertical slide direction
   ///
   /// In en, this message translates to:
   /// **'Vertical (Up, Down)'**
   String get verticalSlide;
 
-  /// No description provided for @horizontalSlide.
+  /// Option for horizontal slide direction
   ///
   /// In en, this message translates to:
   /// **'Horizontal (Left, Right)'**
   String get horizontalSlide;
 
-  /// No description provided for @songbooksMgnt.
+  /// Title for songbooks management section
   ///
   /// In en, this message translates to:
   /// **'Songbooks Management'**
   String get songbooksMgnt;
 
-  /// No description provided for @songbooksMgntText.
+  /// Description for songbooks management
   ///
   /// In en, this message translates to:
   /// **'Reselect your songbooks afresh'**
   String get songbooksMgntText;
 
-  /// No description provided for @screenAwake.
+  /// Setting to keep screen awake during song presentation
   ///
   /// In en, this message translates to:
   /// **'Keep Screen On in Song View'**
   String get screenAwake;
 
-  /// No description provided for @slideDirection.
+  /// Label for slide direction setting
   ///
   /// In en, this message translates to:
   /// **'Song Slides Direction'**
   String get slideDirection;
 
-  /// A message with a single parameter
+  /// Message showing current slide direction with parameter
   ///
   /// In en, this message translates to:
   /// **'Direction: {direction}'**
   String setDirection(String direction);
 
-  ///
+  /// Label for theme mode setting
   ///
   /// In en, this message translates to:
   /// **'Theme Mode'**
   String get themeMode;
 
-  /// A message with a single parameter
+  /// Message showing current theme with parameter
   ///
   /// In en, this message translates to:
   /// **'Theme: {theme}'**
   String setTheme(String theme);
 
-  /// No description provided for @defaultMode.
+  /// Label for default mode
   ///
   /// In en, this message translates to:
   /// **'Default'**
   String get defaultMode;
 
-  /// No description provided for @lightMode.
+  /// Label for light mode
   ///
   /// In en, this message translates to:
   /// **'Light'**
   String get lightMode;
 
-  /// No description provided for @darkMode.
+  /// Label for dark mode
   ///
   /// In en, this message translates to:
   /// **'Dark'**
   String get darkMode;
 
-  /// No description provided for @labelError0.
+  /// Generic unknown error message
   ///
   /// In en, this message translates to:
   /// **'An unknown error occured.'**
   String get labelError0;
 
-  /// No description provided for @labelError404.
+  /// Error message for 404 (not found) server error
   ///
   /// In en, this message translates to:
   /// **'We\'re unable to connect you to our server at the moment.'**
   String get labelError404;
 
-  /// No description provided for @labelError500.
+  /// Error message for 500 (server) error
   ///
   /// In en, this message translates to:
   /// **'You\'re unable to connect to our server at the moment.'**
   String get labelError500;
 
-  /// No description provided for @labelError504.
+  /// Error message for 504 (timeout) error
   ///
   /// In en, this message translates to:
   /// **'Your request to our server has timed out.'**
   String get labelError504;
 
-  /// No description provided for @labelError999.
+  /// Error message for invalid server response
   ///
   /// In en, this message translates to:
   /// **'Our server returned an invalid response.'**
   String get labelError999;
 
-  /// No description provided for @labelError1000.
+  /// Error message for request submission failure
   ///
   /// In en, this message translates to:
   /// **'We\'re unable to submit your request.'**
   String get labelError1000;
 
-  /// No description provided for @labelFeedback0.
+  /// Generic unknown error for feedback
   ///
   /// In en, this message translates to:
   /// **'An unknown error occured.'**
   String get labelFeedback0;
 
-  /// No description provided for @labelFeedback404.
+  /// Detailed 404 error message with support contact for feedback
   ///
   /// In en, this message translates to:
   /// **'We can\'t connect you to our server at the moment due to a technical issue on our end. Please try connecting again, if the issue persists contact us on: thesonglibapp@gmail.com'**
   String get labelFeedback404;
 
-  /// No description provided for @labelFeedback500.
+  /// Detailed 500 error message with troubleshooting steps for feedback
   ///
   /// In en, this message translates to:
   /// **'We can\'t connect you to our server at the moment due to a technical issue on your end. Please try switching to a reliable internet service and trying again. If the issue persists contact us on: thesonglibapp@gmail.com'**
   String get labelFeedback500;
 
-  /// No description provided for @labelFeedback504.
+  /// Timeout error message for feedback
   ///
   /// In en, this message translates to:
   /// **'Your request to our server has timed out.'**
   String get labelFeedback504;
 
-  /// No description provided for @labelFeedback999.
+  /// Invalid response error for feedback
   ///
   /// In en, this message translates to:
   /// **'Our server returned an invalid response.'**
   String get labelFeedback999;
 
-  /// No description provided for @labelFeedback1000.
+  /// Request submission failure for feedback
   ///
   /// In en, this message translates to:
   /// **'We\'re unable to submit your request.'**
   String get labelFeedback1000;
 
-  /// No description provided for @labelPermissionTitle.
+  /// Title for permission request dialog
   ///
   /// In en, this message translates to:
   /// **'Permission Required'**
   String get labelPermissionTitle;
 
-  /// No description provided for @labelPermissionText.
+  /// Explanation text for why permissions are needed
   ///
   /// In en, this message translates to:
   /// **'This app requires this permissions to function properly.'**
   String get labelPermissionText;
 
-  /// No description provided for @misc.
+  /// Miscellaneous category label
   ///
   /// In en, this message translates to:
   /// **'misc'**

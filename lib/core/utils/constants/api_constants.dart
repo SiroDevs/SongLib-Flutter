@@ -4,7 +4,7 @@ class ApiConstants {
 
   // basic urls
   /// books route: '/book'
-  static const String books = '/book';
-  static const String songs = '/song';
-  static const String songsByBook = '/song/book/';
+  static const String books = '/books';
+  static const String songs = '/songs';
+  static const String songsByBook = '/songs/books/';
 }

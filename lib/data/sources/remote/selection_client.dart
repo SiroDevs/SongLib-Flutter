@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:http/http.dart';
 
-import '../../../core/network/api_util.dart';
+import 'api_service.dart';
 import '../../../core/utils/constants/api_constants.dart';
 
 class SelectionClient {

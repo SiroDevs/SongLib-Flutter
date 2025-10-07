@@ -1,23 +1,20 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 
-import '../../../../core/utils/constants/app_assets.dart';
-import '../../../../domain/entities/basic_model.dart';
-import '../../../../data/models/book.dart';
 import '../../../../core/utils/app_util.dart';
+import '../../../../core/utils/constants/app_assets.dart';
+import '../../../../data/models/book.dart';
+import '../../../../domain/entities/basic_model.dart';
 import '../../../blocs/step1/step1_bloc.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../navigator/route_names.dart';
-import '../../../theme/theme_colors.dart';
 import '../../../theme/theme_styles.dart';
 import '../../../widgets/general/list_items.dart';
 import '../../../widgets/progress/custom_snackbar.dart';
 import '../../../widgets/progress/general_progress.dart';
 import '../../../widgets/progress/skeleton.dart';
+import '../../common/theme_button.dart';
 
 part 'widgets/step1_fab.dart';
 
@@ -58,7 +55,7 @@ class Step1ScreenState extends State<Step1Screen> {
       child: BlocConsumer<Step1Bloc, Step1State>(
         listener: (context, state) {
           if (state is Step1SavedState) {
-            Navigator.pushNamed(context, RouteNames.step2Selection);
+            Navigator.pushNamed(context, RouteNames.step2);
           } else if (state is Step1FailureState) {
             CustomSnackbar.show(context, feedbackMessage(state.feedback, l10n));
           } else if (state is Step1FetchedState) {
@@ -73,17 +70,26 @@ class Step1ScreenState extends State<Step1Screen> {
             appBar: AppBar(
               title: Text(l10n.booksTitle),
               actions: [
-                IconButton(
-                  icon: Platform.isIOS
-                      ? Icon(CupertinoIcons.refresh)
-                      : Icon(Icons.refresh),
-                  onPressed: () => bloc.add(const FetchBooks()),
+                Tooltip(
+                  message: "Refresh books data",
+                  child: IconButton(
+                    icon: Icon(Icons.refresh),
+                    onPressed: () => bloc.add(const FetchBooks()),
+                  ),
                 ),
+                ThemeButton(),
+                SizedBox(width: 20),
               ],
             ),
             body: state.maybeWhen(
               orElse: () => SizedBox(),
               progress: () => const SelectionLoading(),
+              noInternet: () => EmptyState(
+                title: l10n.noConnection,
+                message: l10n.noConnectionBody,
+                showRetry: true,
+                onRetry: () => bloc.add(const FetchBooks()),
+              ),
               failure: (feedback) => EmptyState(
                 title: l10n.nothingHere,
                 showRetry: true,
@@ -92,7 +98,7 @@ class Step1ScreenState extends State<Step1Screen> {
               fetched: (selectedBooksIds, books, booksListing) {
                 var booksGridview = LayoutBuilder(
                   builder: (context, dimens) {
-                    final axisCount = (dimens.maxWidth / 450).round();
+                    final axisCount = (dimens.maxWidth / 400).round();
                     return GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: axisCount,

@@ -141,7 +141,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get screenshoted => 'Tunayo screenshot yako!';
 
   @override
-  String get appSettings => 'App Settings';
+  String get appSettings => 'Settings';
 
   @override
   String get displayTitle => 'Display';

@@ -49,11 +49,11 @@ class Step1FabState extends State<Step1Fab> {
           progress: () => const SizedBox.shrink(),
           failure: (feedback) => const SizedBox.shrink(),
           orElse: () => FloatingActionButton.extended(
-            backgroundColor: ThemeColors.bgColorPrimary3(context),
+            // backgroundColor: ThemeColors.bgColorPrimary3(context),
             onPressed: () => areYouDoneDialog(),
             label: Text(
               l10n.proceed.toUpperCase(),
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
             ),
             icon: Icon(Icons.check, color: Colors.white),
           ),

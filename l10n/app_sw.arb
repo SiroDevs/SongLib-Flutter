@@ -1,106 +1,355 @@
 {
+  "@@locale": "sw",
   "listTitle": "Orodha za Nyimbo",
+  "@listTitle": {
+    "description": "Kichwa cha sehemu ya orodha za nyimbo"
+  },
   "searchTitle": "Tafuta Nyimbo",
+  "@searchTitle": {
+    "description": "Kichwa cha sehemu ya kutafuta nyimbo"
+  },
   "likesTitle": " Zilizopendwa",
+  "@likesTitle": {
+    "description": "Kichwa cha sehemu ya nyimbo zilizopendwa"
+  },
   "historiesTitle": "Historia",
+  "@historiesTitle": {
+    "description": "Kichwa cha sehemu ya historia ya nyimbo"
+  },
   "draftTitle": "Nyimbo Zangu",
+  "@draftTitle": {
+    "description": "Kichwa cha sehemu ya nyimbo zilizochakatwa"
+  },
   "settingsTitle": "Mipangilio",
+  "@settingsTitle": {
+    "description": "Kichwa cha sehemu ya mipangilio"
+  },
   "helpdeskTitle": "Usaidizi",
+  "@helpdeskTitle": {
+    "description": "Kichwa cha sehemu ya usaidizi"
+  },
   "donateTitle": "Jinsi ya Kuchanga",
+  "@donateTitle": {
+    "description": "Kichwa cha habari kuhusu kuchangia"
+  },
   "merchandiseTitle": "Nunua bidhaa zetu",
+  "@merchandiseTitle": {
+    "description": "Kichwa cha sehemu ya bidhaa"
+  },
   "booksTitle": "Chagua Vitabu",
+  "@booksTitle": {
+    "description": "Kichwa cha uteuzi wa vitabu vya nyimbo"
+  },
   "booksTitleLoading": "Inapakia data ...",
+  "@booksTitleLoading": {
+    "description": "Ujumbe wa upakiaji wakati wa kupata data ya vitabu vya nyimbo"
+  },
   "homeTitle": "Nyumbani",
+  "@homeTitle": {
+    "description": "Kichwa cha sehemu ya nyumbani"
+  },
   "listedTitle": "Kuongezea orodha mpya",
+  "@listedTitle": {
+    "description": "Kichwa cha kuongeza orodha mpya ya nyimbo"
+  },
   "editorTitle": "Kunakili wimbo mpya",
+  "@editorTitle": {
+    "description": "Kichwa cha skrini ya kunakili/kuhariri wimbo"
+  },
   "songTitle": "Jina la Wimbo",
+  "@songTitle": {
+    "description": "Kichwa cha kujaza jina la wimbo"
+  },
   "songText": "Maneno ya Wimbo",
+  "@songText": {
+    "description": "Kichwa cha kujaza maneno ya wimbo"
+  },
   "hasChorus": "With a Chorus",
+  "@hasChorus": {
+    "description": "Lebo ya kugeuza/cheki kisanduku cha pambio"
+  },
   "verses": "Verse",
+  "@verses": {
+    "description": "Lebo ya mistari ya wimbo"
+  },
   "addtoList": "Ongeza kwa orodha",
+  "@addtoList": {
+    "description": "Kitendo cha kuongeza wimbo kwenye orodha"
+  },
   "addSongtoList": "Ongeza wimbo kwa orodha",
+  "@addSongtoList": {
+    "description": "Maelezo ya kitendo cha kuongeza wimbo kwenye orodha"
+  },
   "likeSong": "Penda wimbo huu",
+  "@likeSong": {
+    "description": "Kitendo cha kupenda/kuweka wimbo kwenye vipendwa"
+  },
   "editSong": "Hariri wimbo huu",
+  "@editSong": {
+    "description": "Kitendo cha kuhariri wimbo"
+  },
   "deleteSong": "Futa wimbo huu",
+  "@deleteSong": {
+    "description": "Kitendo cha kufuta wimbo"
+  },
   "copySong": "Nakili wimbo huu",
+  "@copySong": {
+    "description": "Kitendo cha kunakili wimbo"
+  },
   "deleteList": "Futa orodha hii",
+  "@deleteList": {
+    "description": "Kitendo cha kufuta orodha ya nyimbo"
+  },
   "shareSong": "Shiriki wimbo huu",
+  "@shareSong": {
+    "description": "Kitendo cha kushiriki wimbo"
+  },
   "songCopied": "wimbo umenakiliwa!",
+  "@songCopied": {
+    "description": "Ujumbe wa mafanikio wakati wimbo unanakiliwa"
+  },
   "copyVerse": "Nakili verse",
+  "@copyVerse": {
+    "description": "Kitendo cha kunakili mstari"
+  },
   "textCopied": " umenakiliwa!",
+  "@textCopied": {
+    "description": "Ujumbe wa mafanikio wakati maandishi yanenakiliwa"
+  },
   "shareVerse": "Shiriki verse",
+  "@shareVerse": {
+    "description": "Kitendo cha kushiriki mstari"
+  },
   "songLiked": " umependwa!",
+  "@songLiked": {
+    "description": "Ujumbe wa mafanikio wakati wimbo unaongezwa kwenye vipendwa"
+  },
   "songAddedToList": " umeongezwa kwa ",
+  "@songAddedToList": {
+    "description": "Ujumbe wa mafanikio wakati wimbo unaongezwa kwenye orodha"
+  },
   "listCreated": "orodha ya nyimbo imebuniwa!",
+  "@listCreated": {
+    "description": "Ujumbe wa mafanikio wakati orodha inatengenezwa"
+  },
   "listUpdated": "orodha ya nyimbo imehaririwa!",
+  "@listUpdated": {
+    "description": "Ujumbe wa mafanikio wakati orodha inasasishwa"
+  },
   "deleted": "imefutwa!",
+  "@deleted": {
+    "description": "Ujumbe wa mafanikio wakati kipande kikifutwa"
+  },
   "readyShare": "Tayari kwa kushiriki",
+  "@readyShare": {
+    "description": "Ujumbe unaoonyesha yaliyomo yako tayari kushirikiwa"
+  },
   "screenshotVerse": "Screenshot verse",
+  "@screenshotVerse": {
+    "description": "Kitendo cha kuchukua skrini ya mstari"
+  },
   "screenshoted": "Tunayo screenshot yako!",
+  "@screenshoted": {
+    "description": "Ujumbe wa mafanikio wakati skrini inachukuliwa"
+  },
   "chooseTheme": "Chagua Mwonekano",
+  "@chooseTheme": {
+    "description": "Kichwa cha kidirisha cha uteuzi wa mwonekano"
+  },
   "themeDefault": "System Default",
+  "@themeDefault": {
+    "description": "Chaguo la mwonekano chaguomsingi wa mfumo"
+  },
   "themeLight": "Angavu",
+  "@themeLight": {
+    "description": "Chaguo la mwonekano wa angavu"
+  },
   "themeDark": "Giza",
+  "@themeDark": {
+    "description": "Chaguo la mwonekano wa giza"
+  },
   "okay": "SAWA",
+  "@okay": {
+    "description": "Nakala ya kitufe cha uthibitisho"
+  },
   "cancel": "GHAIRI",
+  "@cancel": {
+    "description": "Nakala ya kitufe cha kughairi"
+  },
   "remind": "NIKUMBUSHE BAADAYE ME",
+  "@remind": {
+    "description": "Kitufe cha kuahirisha ukumbusho"
+  },
   "donate": "CHANGIA SASA",
+  "@donate": {
+    "description": "Kitendo cha kufanya mchango"
+  },
   "proceed": "ENDELEA",
+  "@proceed": {
+    "description": "Kitendo cha kuendelea/mbele"
+  },
   "justAMinute": "Hebu kidogo!",
+  "@justAMinute": {
+    "description": "Kichwa cha kidirisha kinachovutia umakini"
+  },
   "supportSonglib": "Unga mkono SongLib",
+  "@supportSonglib": {
+    "description": "Kichwa cha ombi la usaidizi/mchango"
+  },
   "notificationDialog": "Hebu tukukumbushe",
+  "@notificationDialog": {
+    "description": "Kichwa cha kidirisha cha ukumbusho"
+  },
   "donationRequest": "Ombi la kuchangisha",
+  "@donationRequest": {
+    "description": "Kichwa cha ombi la mchango"
+  },
   "donationRequestBody": "SongLib ina mengi katika bomba na itahitaji usaidizi wako ili kutimiza hilo.",
+  "@donationRequestBody": {
+    "description": "Nakala ya mwili wa ombi la mchango"
+  },
   "doneSelecting": "Umemaliza kuchagua?",
+  "@doneSelecting": {
+    "description": "Haraka kuthibitisha ukamilifu wa uteuzi"
+  },
   "doneSelectingBody": "Kama umemaliza kuchagua tafadhali endelea mbele. Tunaweza kukurudisha hapa kila wakati ili uchague upya.",
+  "@doneSelectingBody": {
+    "description": "Nakala ya mwili wa haraka ya ukamilifu wa uteuzi"
+  },
   "noSelection": "Lo! Hakuna uteuzi uliopatikana",
+  "@noSelection": {
+    "description": "Ujumbe wa hitilafu wakati hakuna uteuzi unaofanyika"
+  },
   "noSelectionBody": "Tafadhali chagua angalau kitabu 1 ili kuendelea na hatua inayofuata.",
+  "@noSelectionBody": {
+    "description": "Nakala ya mwili wa hitilafu ya hakuna uteuzi"
+  },
   "errorOccurred": "Wueh! Hukupaswa kuona hili!",
+  "@errorOccurred": {
+    "description": "Kichwa cha hitilafu isiyotarajiwa"
+  },
   "errorOccurredBody1": "Hitilafu isiyotarajiwa ilitokea wakati wa kujaribu kuwasilisha wimbo kwako. Tafadhali jaribu tena baadaye au wasiliana na usaidizi",
+  "@errorOccurredBody1": {
+    "description": "Nakala ya mwili wa hitilafu ya kuwasilisha wimbo"
+  },
   "errorOccurredBody": "Hitilafu isiyotarajiwa ilitokea wakati wa kujaribu kuleta data kutoka kwa seva. Tafadhali jaribu tena baadaye au wasiliana na usaidizi",
+  "@errorOccurredBody": {
+    "description": "Nakala ya mwili wa hitilafu ya kupata data kutoka kwa seva"
+  },
   "noConnection": "Hamna muunganisho wa mtandao!",
+  "@noConnection": {
+    "description": "Kichwa cha hitilafu ya hakuna muunganisho wa mtandao"
+  },
   "noConnectionBody": "Iwapo una muunganisho wa mtandao imara, basi ni seva zetu ambazo hazipatikani.\n\nIkiwa hali hii itaendelea, tutumie barua pepe: futuristicken@gmail.com na picha ya skrini na maelezo ya kifaa chako.",
+  "@noConnectionBody": {
+    "description": "Nakala ya mwili wa hitilafu ya muunganisho na barua pepe ya usaidizi"
+  },
   "itsEmptyHere": "Wueh! Ni kutupu hapa",
+  "@itsEmptyHere": {
+    "description": "Kichwa cha hali tupu kwa sehemu za jumla"
+  },
   "itsEmptyHere1": "Wueh! Bado hamna orodha hapa",
+  "@itsEmptyHere1": {
+    "description": "Kichwa cha hali tupu kwa sehemu ya orodha"
+  },
   "itsEmptyHereBody": "Hamna chochote hapa, fanya uteuzi wa nyimbo kwa mara nyingine tena",
+  "@itsEmptyHereBody": {
+    "description": "Mwili wa hali tupu kwa uteuzi wa wimbo"
+  },
   "itsEmptyHereBody1": "Hamna chochote hapa, tafadhali penda wimbo, tafuta au tazama wimbo au bora zaidi ongeza orodha maalum ili kufuta utupu huu hapa",
+  "@itsEmptyHereBody1": {
+    "description": "Mwili wa hali tupu na mapendekezo kwa orodha"
+  },
   "itsEmptyHereBody2": "Hamna chochote hapa, tafadhali ongeza wimbo ili kuondoa utupu huu hapa",
+  "@itsEmptyHereBody2": {
+    "description": "Mwili wa hali tupu kwa sehemu ya michakato"
+  },
   "itsEmptyHereBody3": "WHamna chochote hapa, tafadhali kama wimbo ili kuondoa utupu huu hapa",
+  "@itsEmptyHereBody3": {
+    "description": "Mwili wa hali tupu kwa sehemu ya vipendwa"
+  },
   "itsEmptyHereBody4": "Hamna chochote hapa, unaweza kuongeza orodha za kibinafsi na kuziongeza nyimbo",
+  "@itsEmptyHereBody4": {
+    "description": "Mwili wa hali tupu na pendekezo kwa orodha za kibinafsi"
+  },
   "keyboardShortcuts": "Njia za mkato za kibodi",
+  "@keyboardShortcuts": {
+    "description": "Kichwa cha sehemu ya njia za mkato za kibodi"
+  },
   "keyboardShortcutsTexts": "Herufi I - Onyesha mikato ya kibodi \nESC Key - Toka kwenye Wasilisho la Wimbo \n\nMshale wa CHINI - Nenda kwa Mstari Ufuatao \n Kishale cha JUU - Nenda kwa Mstari Uliotangulia \n\nHerufi C - Nenda kwenye Pambio ya Wimbo \nBarua S - Nenda kwa Mstari wa Pili  Toka Mwisho\nHerufi L - Nenda kwa Mstari wa Mwisho \n\nNambari 1, 2, 3, 4, 5, 6, 7 - Nenda kwa Mstari kwa Nambari",
+  "@keyboardShortcutsTexts": {
+    "description": "Orodha ya njia za mkato za kibodi na maelezo"
+  },
   "disabled": "Zima",
+  "@disabled": {
+    "description": "Lebo ya hali iliyozimwa"
+  },
   "enabled": "Wezesha",
+  "@enabled": {
+    "description": "Lebo ya hali iliyowezeshwa"
+  },
   "systemDefault": "System Default",
+  "@systemDefault": {
+    "description": "Lebo ya chaguo chaguomsingi cha mfumo"
+  },
   "verticalSlide": "Juu Chini",
+  "@verticalSlide": {
+    "description": "Chaguo la mwelekeo wa kuteleza wima"
+  },
   "horizontalSlide": "Kushoto Kulia",
+  "@horizontalSlide": {
+    "description": "Chaguo la mwelekeo wa kuteleza mlalo"
+  },
   "songbooksMgnt": "Mipangilio za Vitabu",
+  "@songbooksMgnt": {
+    "description": "Kichwa cha sehemu ya usimamizi wa vitabu vya nyimbo"
+  },
   "songbooksMgntText": "Chagua vitabu upya",
+  "@songbooksMgntText": {
+    "description": "Maelezo ya usimamizi wa vitabu vya nyimbo"
+  },
   "screenAwake": "Skrini isizime kwenye Presentation ya Wimbo",
+  "@screenAwake": {
+    "description": "Mpangilio wa kuweka skrini ikiwa wakati wa uwasilishaji wa wimbo"
+  },
   "slideDirection": "Upande wa Slides za Nyimbo",
+  "@slideDirection": {
+    "description": "Lebo ya mpangilio wa mwelekeo wa kuteleza"
+  },
   "setDirection": "Upande: {direction}",
   "@setDirection": {
-    "description": "A message with a single parameter",
+    "description": "Ujumbe unaoonyesha mwelekeo wa sasa wa kuteleza na kigezo",
     "placeholders": {
       "direction": {
         "type": "String",
-        "example": "Bob"
+        "example": "Wima"
       }
     }
   },
   "themeMode": "Theme Mode",
+  "@themeMode": {
+    "description": "Lebo ya mpangilio wa hali ya mwonekano"
+  },
   "setTheme": "Mwonekano: {theme}",
   "@setTheme": {
-    "description": "A message with a single parameter",
+    "description": "Ujumbe unaoonyesha mwonekano wa sasa na kigezo",
     "placeholders": {
       "theme": {
         "type": "String",
-        "example": "Bob"
+        "example": "Giza"
       }
     }
   },
   "defaultMode": "Default",
+  "@defaultMode": {
+    "description": "Lebo ya hali chaguomsingi"
+  },
   "lightMode": "Angavu",
-  "darkMode": "Giza"
-
+  "@lightMode": {
+    "description": "Lebo ya hali ya angavu"
+  },
+  "darkMode": "Giza",
+  "@darkMode": {
+    "description": "Lebo ya hali ya giza"
+  }
 }

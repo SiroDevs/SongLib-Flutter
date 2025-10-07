@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:froom/froom.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
 
-import '../../../core/utils/app_util.dart';
 import '../../models/models.dart';
 import 'dao/books_dao.dart';
 import 'dao/drafts_dao.dart';
@@ -16,7 +15,7 @@ import 'dao/songs_dao.dart';
 part 'app_database.g.dart';
 
 @Database(
-  version: 2,
+  version: 3,
   entities: [
     Book,
     Draft,
@@ -38,22 +37,8 @@ abstract class AppDatabase extends FroomDatabase {
   SongsDao get songsDao;
 }
 
-final addDraftsListedsTables = Migration(1, 2, (database) async {
-  logger("Add drafts and listeds tables");
-  await database.execute(
-    'CREATE TABLE IF NOT EXISTS `drafts` (`rid` INTEGER PRIMARY KEY AUTOINCREMENT, `songId` INTEGER, `songNo` INTEGER, `title` TEXT, `alias` TEXT, `content` TEXT, `views` INTEGER, `likes` INTEGER, `liked` INTEGER, `created` TEXT, `updated` TEXT)',
-  );
-  await database.execute(
-    'CREATE TABLE IF NOT EXISTS `listeds` (`rid` INTEGER PRIMARY KEY AUTOINCREMENT, `parentid` INTEGER, `song` INTEGER, `title` TEXT, `description` TEXT, `position` INTEGER, `created` TEXT, `updated` TEXT)',
-  );
-});
-
-final migrations = [addDraftsListedsTables];
-
 Future<AppDatabase> buildInMemoryDatabase() {
-  return $FloorAppDatabase
+  return $FroomAppDatabase
       .inMemoryDatabaseBuilder()
-      .addMigrations(migrations)
-      
       .build();
 }

@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'dart:math';
 import 'dart:developer' as logging show log;
 
 import 'package:flutter/material.dart';
@@ -110,11 +109,7 @@ void getFrequencyParams(
 
 Future<bool> isKeyboardShowing(BuildContext context) async {
   // ignore: unnecessary_null_comparison
-  if (WidgetsBinding.instance != null) {
     return View.of(context).viewInsets.bottom > 0;
-  } else {
-    return false;
-  }
 }
 
 Future<void> closeKeyboard(BuildContext context) async {
@@ -142,9 +137,6 @@ String? textValidator(String? value) {
 
 bool isNumeric(String s) {
   // ignore: unnecessary_null_comparison
-  if (s == null) {
-    return false;
-  }
   return double.tryParse(s) != null;
 }
 
@@ -274,8 +266,4 @@ String songShareString(String title, String content) {
 
 String verseOfString(String number, int count) {
   return 'VERSE $number of $count';
-}
-
-double getFontSize(int characters, double height, double width) {
-  return sqrt((height * width) / characters);
 }

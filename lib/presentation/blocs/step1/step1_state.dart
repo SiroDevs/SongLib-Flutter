@@ -19,4 +19,6 @@ class Step1State with _$Step1State {
   const factory Step1State.saved(String selectedBooks) = Step1SavedState;
 
   const factory Step1State.failure(String feedback) = Step1FailureState;
+
+  const factory Step1State.noInternet() = Step1NoInternetState;
 }

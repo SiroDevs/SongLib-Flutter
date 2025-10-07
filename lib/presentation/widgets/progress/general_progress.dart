@@ -43,44 +43,50 @@ class SmallCircularProgress extends StatelessWidget {
 
 class EmptyState extends StatelessWidget {
   final String title;
+  final String message;
   final String titleRetry;
   final bool showRetry;
   final VoidCallback? onRetry;
   const EmptyState({
-    Key? key,
+    super.key,
     this.title =
         'Sorry, no data is available at the moment. Please check back later.',
+    this.message = "",
     this.titleRetry = 'RETRY',
     this.showRetry = false,
     this.onRetry,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(
-          AppAssets.imgZeroState,
-          height: 160,
-          width: 160,
-        ),
+        Image.asset(AppAssets.imgZeroState, height: 160, width: 160),
         Text(
           title,
           textAlign: TextAlign.center,
-          style: TextStyles.bodyStyle1.size(16).textHeight(1.2),
+          style: TextStyles.titleStyle20.size(18).textHeight(1.2),
+        ).center().padding(all: Sizes.l),
+        const SizedBox(height: Sizes.xs),
+        Text(
+          message,
+          textAlign: TextAlign.center,
+          style: TextStyles.bodyStyle1.size(14).textHeight(1.2),
         ).center().padding(all: Sizes.l),
         const SizedBox(height: Sizes.l),
         if (showRetry) ...[
           [
+            SizedBox().expanded(),
             AppButton(
               label: titleRetry,
               onPressed: onRetry,
               bgColor: ThemeColors.bgColorPrimary3(context),
               borderRadius: const BorderRadius.all(Radius.circular(10)),
-            ).expanded(),
+            ),
+            SizedBox().expanded(),
           ].toRow().padding(all: Sizes.l),
-        ]
+        ],
       ],
     );
   }

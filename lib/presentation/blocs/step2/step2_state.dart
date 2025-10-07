@@ -17,4 +17,6 @@ class Step2State with _$Step2State {
   const factory Step2State.saved() = Step2SavedState;
 
   const factory Step2State.failure(String feedback) = Step2FailureState;
+
+  const factory Step2State.noInternet() = Step2NoInternetState;
 }

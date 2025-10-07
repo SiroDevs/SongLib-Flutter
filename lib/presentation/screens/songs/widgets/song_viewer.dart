@@ -16,12 +16,12 @@ class SongViewer extends StatefulWidget {
 }
 
 class SongViewerState extends State<SongViewer> {
-  late HomeBloc bloc;
+  late MainBloc bloc;
 
   @override
   void initState() {
     super.initState();
-    bloc = context.read<HomeBloc>();
+    bloc = context.read<MainBloc>();
   }
 
   Future<void> onPresent() async {
@@ -72,7 +72,7 @@ class SongViewerState extends State<SongViewer> {
             ),
           ),
           Tooltip(
-            message: widget.song.liked ? l10n.songLike : l10n.songDislike,
+            message: widget.song.liked ? l10n.songDislike : l10n.songLike,
             child: InkWell(
               onTap: () {},
               child: Padding(

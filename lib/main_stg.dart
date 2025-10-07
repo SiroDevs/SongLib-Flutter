@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -23,19 +21,15 @@ Future<void> main() async {
   logger('Starting app from main_stg.dart');
   await configureDependencies(Environments.staging);
 
-  if (!Platform.isAndroid && !Platform.isIOS && !Platform.isFuchsia) {
-    await windowManager.ensureInitialized();
-    WindowOptions windowOptions = const WindowOptions(
-      fullScreen: false,
-      alwaysOnTop: false,
-      titleBarStyle: TitleBarStyle.normal,
-    );
+  await windowManager.ensureInitialized();
+  WindowOptions windowOptions = const WindowOptions(
+    alwaysOnTop: false,
+    titleBarStyle: TitleBarStyle.normal,
+  );
 
-    windowManager.waitUntilReadyToShow(windowOptions, () async {
-      await windowManager.maximize();
-      await windowManager.show();
-    });
-  }
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+  });
 
   runApp(const MyApp());
 }

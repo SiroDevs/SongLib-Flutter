@@ -2,28 +2,25 @@ part of '../presentor_screen.dart';
 
 class PresentorSlide extends StatefulWidget {
   final int? index;
-  final double? tabsWidth;
   final double? indicatorWidth;
   final IndicatorSide? indicatorSide;
   final List<Tab>? tabs;
-  final List<Widget>? contents;
+  final List<Widget>? slides;
   final String? songbook;
   final TextDirection? direction;
-  final bool isBigScreen;
 
   const PresentorSlide({
     super.key,
     required this.index,
     required this.tabs,
-    required this.contents,
+    required this.slides,
     required this.songbook,
-    this.tabsWidth = 200,
     this.indicatorWidth = 3,
     this.indicatorSide,
     this.direction = TextDirection.ltr,
-    this.isBigScreen = false,
   }) : assert(
-            tabs != null && contents != null && tabs.length == contents.length);
+         tabs != null && slides != null && tabs.length == slides.length,
+       );
 
   @override
   State<PresentorSlide> createState() => _PresentorSlideState();
@@ -68,10 +65,12 @@ class _PresentorSlideState extends State<PresentorSlide>
 
     selectedIndex = widget.index;
     for (int? i = 0; i! < widget.tabs!.length; i++) {
-      animationControllers!.add(AnimationController(
-        duration: const Duration(milliseconds: 400),
-        vsync: this,
-      ));
+      animationControllers!.add(
+        AnimationController(
+          duration: const Duration(milliseconds: 400),
+          vsync: this,
+        ),
+      );
     }
     selectTab(widget.index!);
 
@@ -101,6 +100,23 @@ class _PresentorSlideState extends State<PresentorSlide>
 
   @override
   Widget build(BuildContext context) {
+    var pageView = PageView.builder(
+      scrollDirection: slideVertical ? Axis.vertical : Axis.horizontal,
+      controller: pageController,
+      physics: const AlwaysScrollableScrollPhysics(),
+      itemCount: widget.slides!.length,
+      onPageChanged: (index) {
+        setState(() {
+          if (changePageByTapView == false || changePageByTapView == null) {
+            selectTab(index);
+          }
+          if (selectedIndex == index) {
+            changePageByTapView = null;
+          }
+        });
+      },
+      itemBuilder: (context, index) => widget.slides![index],
+    );
     var slideContainer = SlideContainer(
       tabs: widget.tabs!,
       selectedIndex: selectedIndex!,
@@ -118,40 +134,12 @@ class _PresentorSlideState extends State<PresentorSlide>
         );
       },
     );
+
     return Directionality(
       textDirection: widget.direction!,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          PageView.builder(
-            scrollDirection: slideVertical ? Axis.vertical : Axis.horizontal,
-            controller: pageController,
-            physics: const AlwaysScrollableScrollPhysics(),
-            itemCount: widget.contents!.length,
-            onPageChanged: (index) {
-              setState(() {
-                if (changePageByTapView == false ||
-                    changePageByTapView == null) {
-                  selectTab(index);
-                }
-                if (selectedIndex == index) {
-                  changePageByTapView = null;
-                }
-              });
-            },
-            itemBuilder: (context, index) => widget.contents![index],
-          ).expanded(),
-          if (widget.isBigScreen) ...[
-            slideContainer,
-            PresentorSongBook(
-              songbook: widget.songbook!,
-              tabsWidth: widget.tabsWidth!,
-            ),
-          ] else ...[
-            Align(alignment: Alignment.center, child: slideContainer),
-            const SizedBox(height: 20),
-          ],
-        ],
+        children: [pageView.expanded(), slideContainer, SizedBox(height: 10)],
       ),
     );
   }

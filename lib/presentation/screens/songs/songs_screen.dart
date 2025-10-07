@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,14 +5,14 @@ import 'package:styled_widget/styled_widget.dart';
 
 import '../../../data/models/models.dart';
 import '../../../core/utils/app_util.dart';
+import '../../blocs/main/main_bloc.dart';
 import '../../l10n/app_localizations.dart';
+import '../../theme/theme_styles.dart';
 import '../../widgets/list_items/search_book_item.dart';
 import '../../widgets/list_items/search_song_item.dart';
-import '../../theme/theme_styles.dart';
-import '../../blocs/home/home_bloc.dart';
 import '../common/app_intents.dart';
 import '../common/search_songs_utils.dart';
-import '../home/home_screen.dart';
+import '../main/main_screen.dart';
 import '../presentor/ui/presentor_screen.dart';
 
 part 'widgets/song_viewer.dart';
@@ -35,7 +33,7 @@ class SongsScreen extends StatefulWidget {
 }
 
 class _SongsScreenState extends State<SongsScreen> {
-  late HomeBloc bloc;
+  late MainBloc bloc;
   late HomeScreenState parent;
   late FocusNode searchFocus;
   late TextEditingController searchController;
@@ -44,7 +42,7 @@ class _SongsScreenState extends State<SongsScreen> {
   void initState() {
     super.initState();
     parent = widget.parent;
-    bloc = context.read<HomeBloc>();
+    bloc = context.read<MainBloc>();
     searchFocus = FocusNode();
     searchController = TextEditingController();
   }
@@ -79,11 +77,8 @@ class _SongsScreenState extends State<SongsScreen> {
     bool? result = await Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => PresentorScreen(
-          song: song,
-          book: book,
-          songs: parent.songs,
-        ),
+        builder: (context) =>
+            PresentorScreen(song: song, book: book, songs: parent.songs),
       ),
     );
 
@@ -102,57 +97,40 @@ class _SongsScreenState extends State<SongsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.isBigScreen
-        ? _buildBigScreen()
-        : SingleChildScrollView(
-            child: Column(
-              children: [
-                BooksList(books: parent.books, selectedBook: 0),
-                SongsList(
-                  selectedSong: parent.selectedSong,
-                  songs: parent.filtered,
-                  onTap: onSongSelect,
+    return LayoutBuilder(
+      builder: (context, dimens) {
+        var bigScreenView = Row(
+          children: [
+            Scaffold(
+              appBar: AppBar(
+                title: SearchWidget(
+                  searchFocus: searchFocus,
+                  searchController: searchController,
+                  onSearch: _onSearch,
                 ),
-              ],
-            ),
-          );
-  }
-
-  Widget _buildBigScreen() {
-    return LayoutBuilder(builder: (context, dimens) {
-      var bigScreenView = Row(
-        children: [
-          Scaffold(
-            appBar: AppBar(
-              title: SearchWidget(
-                searchFocus: searchFocus,
-                searchController: searchController,
-                onSearch: _onSearch,
               ),
-            ),
-            body: Column(
-              children: [
-                BooksList(
-                  books: parent.books,
-                  selectedBook: parent.selectedBook,
-                ),
-                SongsList(
-                  selectedSong: parent.selectedSong,
-                  songs: parent.filtered,
-                  onTap: onSongSelect,
-                  isBigScreen: true,
-                ).expanded(),
-              ],
-            ),
-          ).width(dimens.maxWidth / 2.2),
-          SongViewer(
-            song: parent.selectedSong,
-            books: parent.books,
-            songs: parent.songs,
-          ).expanded(),
-        ],
-      );
-      if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+              body: Column(
+                children: [
+                  BooksList(
+                    books: parent.books,
+                    selectedBook: parent.selectedBook,
+                  ),
+                  SongsList(
+                    selectedSong: parent.selectedSong,
+                    songs: parent.filtered,
+                    onTap: onSongSelect,
+                    isBigScreen: true,
+                  ).expanded(),
+                ],
+              ),
+            ).width(dimens.maxWidth / 2.2),
+            SongViewer(
+              song: parent.selectedSong,
+              books: parent.books,
+              songs: parent.songs,
+            ).expanded(),
+          ],
+        );
         return Shortcuts(
           shortcuts: <ShortcutActivator, Intent>{
             CharacterActivator('s'): SearchIntent(),
@@ -178,9 +156,7 @@ class _SongsScreenState extends State<SongsScreen> {
             ),
           ),
         );
-      } else {
-        return bigScreenView;
-      }
-    });
+      },
+    );
   }
 }
