@@ -9,7 +9,7 @@ import '../../../data/repositories/database_repository.dart';
 import '../../../data/repositories/pref_repository.dart';
 import '../../l10n/app_localizations.dart';
 import '../../navigator/route_names.dart';
-import '../../theme/bloc/theme_bloc.dart';
+import '../../blocs/theme/theme_bloc.dart';
 import '../../theme/theme_data.dart';
 import '../../theme/theme_fonts.dart';
 import '../../theme/theme_styles.dart';
