@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "SongLib"
-#define MyAppVersion "1.0.8"
+#define MyAppVersion "1.0.8.15"
 #define MyAppPublisher "Jackson Siro"
-#define MyAppURL "https://songlib.siro.co.ke"
+#define MyAppURL "https://songlib.vercel.app"
 #define MyAppExeName "SongLib.exe"
 
 [Setup]
@@ -30,9 +30,9 @@ ArchitecturesInstallIn64BitMode=x64compatible
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=D:\Dev\Flutter\Projects\SongLib\dist\windows
+OutputDir=D:\Dev\Flutter\Projects\SongLib-Flutter\dist\windows
 OutputBaseFilename={#MyAppName}_{#MyAppVersion}
-SetupIconFile=D:\Dev\Flutter\Projects\SongLib\windows\runner\resources\app_icon.ico
+SetupIconFile=D:\Dev\Flutter\Projects\SongLib-Flutter\windows\runner\resources\app_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
