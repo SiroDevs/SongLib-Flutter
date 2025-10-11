@@ -1,8 +1,5 @@
 {
     "version": "1.0.8.15",
     "title": "Minimal bug fixes",
-    "description": "We hope you are doing fine",
-    "android": "https://play.google.com/store/apps/details?id=com.songlib",
-    "ios": "https://apps.apple.com/us/app/id6446771305",
-    "github": "https://github.com/SiroDevs/SongLib-Flutter"
+    "description": "We hope you are doing fine"
 }
