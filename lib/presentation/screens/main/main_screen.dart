@@ -15,7 +15,7 @@ import '../../../data/models/models.dart';
 import '../../blocs/main/main_bloc.dart';
 import '../../l10n/app_localizations.dart';
 import '../../navigator/route_names.dart';
-import '../../theme/bloc/theme_bloc.dart';
+import '../../blocs/theme/theme_bloc.dart';
 import '../../theme/theme_colors.dart';
 import '../../theme/theme_data.dart';
 import '../../theme/theme_fonts.dart';

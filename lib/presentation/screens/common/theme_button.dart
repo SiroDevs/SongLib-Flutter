@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/di/injectable.dart';
 import '../../../data/repositories/pref_repository.dart';
 import '../../l10n/app_localizations.dart';
-import '../../theme/bloc/theme_bloc.dart';
+import '../../blocs/theme/theme_bloc.dart';
 import '../../theme/theme_data.dart';
 
 class ThemeButton extends StatefulWidget {

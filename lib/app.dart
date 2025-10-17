@@ -10,7 +10,7 @@ import 'core/utils/constants/pref_constants.dart';
 import 'presentation/l10n/app_localizations.dart';
 import 'presentation/navigator/main_navigator.dart';
 import 'presentation/navigator/route_names.dart';
-import 'presentation/theme/bloc/theme_bloc.dart';
+import 'presentation/blocs/theme/theme_bloc.dart';
 import 'presentation/theme/theme_data.dart';
 
 class MyApp extends StatefulWidget {
