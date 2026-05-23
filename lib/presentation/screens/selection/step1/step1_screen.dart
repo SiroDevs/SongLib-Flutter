@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 
+import '../../../../core/theme/theme_styles.dart';
 import '../../../../core/utils/app_util.dart';
 import '../../../../core/utils/constants/app_assets.dart';
 import '../../../../data/models/book.dart';
@@ -9,7 +10,6 @@ import '../../../../domain/entities/basic_model.dart';
 import '../../../blocs/step1/step1_bloc.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../navigator/route_names.dart';
-import '../../../theme/theme_styles.dart';
 import '../../../widgets/general/list_items.dart';
 import '../../../widgets/progress/custom_snackbar.dart';
 import '../../../widgets/progress/general_progress.dart';

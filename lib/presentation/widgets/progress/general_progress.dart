@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:textstyle_extensions/textstyle_extensions.dart';
 
-import '../../theme/theme_colors.dart';
-import '../../theme/theme_fonts.dart';
-import '../../theme/theme_styles.dart';
+import '../../../core/theme/theme_colors.dart';
+import '../../../core/theme/theme_fonts.dart';
+import '../../../core/theme/theme_styles.dart';
 import '../../../core/utils/constants/app_assets.dart';
 import '../action/app_button.dart';
 

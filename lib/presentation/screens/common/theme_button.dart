@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/di/injectable.dart';
+import '../../../core/theme/bloc/theme_bloc.dart';
+import '../../../core/theme/theme_data.dart';
 import '../../../data/repositories/pref_repository.dart';
 import '../../l10n/app_localizations.dart';
-import '../../blocs/theme/theme_bloc.dart';
-import '../../theme/theme_data.dart';
 
 class ThemeButton extends StatefulWidget {
   const ThemeButton({super.key});

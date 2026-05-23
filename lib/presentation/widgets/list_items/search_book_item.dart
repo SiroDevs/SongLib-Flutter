@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:textstyle_extensions/textstyle_extensions.dart';
 
-import '../../theme/theme_colors.dart';
-import '../../theme/theme_fonts.dart';
+import '../../../core/theme/theme_colors.dart';
+import '../../../core/theme/theme_fonts.dart';
 
 class SearchBookItem extends StatelessWidget {
   final String text;

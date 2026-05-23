@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../core/utils/constants/app_constants.dart';
+import '../utils/constants/app_constants.dart';
 import '../../data/repositories/pref_repository.dart';
-import '../../core/utils/app_util.dart';
-import '../../core/di/injectable.dart';
+import '../utils/app_util.dart';
+import '../di/injectable.dart';
 import 'theme_colors.dart';
 
 class AppTheme {

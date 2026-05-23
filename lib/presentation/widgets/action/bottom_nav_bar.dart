@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/di/injectable.dart';
-import '../../theme/theme_colors.dart';
+import '../../../core/theme/theme_colors.dart';
 import '../../../domain/entities/basic_model.dart';
 import '../../../data/repositories/pref_repository.dart';
 import 'app_nav_icon.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_colors.dart';
-import '../../theme/theme_fonts.dart';
-import '../../theme/theme_styles.dart';
+import '../../../core/theme/theme_colors.dart';
+import '../../../core/theme/theme_fonts.dart';
+import '../../../core/theme/theme_styles.dart';
 
 class AppButton extends StatefulWidget {
   final String label;
