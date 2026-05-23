@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/theme/theme_data.dart';
+import '../../../core/theme/theme_styles.dart';
 import '../../../core/utils/app_util.dart';
-import '../../theme/theme_data.dart';
-import '../../theme/theme_styles.dart';
+import '../../../data/models/models.dart';
 import '../../widgets/list_items/search_book_item.dart';
 import '../../widgets/list_items/search_song_item.dart';
-import '../../../data/models/models.dart';
 import '../presentor/ui/presentor_screen.dart';
 import 'search_songs_utils.dart';
 

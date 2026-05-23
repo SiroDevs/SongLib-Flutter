@@ -2,8 +2,8 @@ import 'package:dartx/dartx.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../theme/theme_colors.dart';
-import '../../theme/theme_fonts.dart';
+import '../../../core/theme/theme_colors.dart';
+import '../../../core/theme/theme_fonts.dart';
 import '../../../domain/entities/basic_model.dart';
 
 class SidebarBtn extends StatefulWidget {
@@ -21,7 +21,7 @@ class SidebarBtn extends StatefulWidget {
   const SidebarBtn(
     this.icon,
     this.label, {
-    Key? key,
+    super.key,
     this.onPressed,
     this.isSelected = false,
     this.iconSize = 26,
@@ -30,7 +30,7 @@ class SidebarBtn extends StatefulWidget {
     this.height = 60,
     this.pageType = PageType.search,
     this.dottedBorder = false,
-  }) : super(key: key);
+  });
 
   @override
   SidebarBtnState createState() => SidebarBtnState();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_colors.dart';
+import '../../../core/theme/theme_colors.dart';
 
 class SmallCard extends StatelessWidget {
   final String cardName;
@@ -44,7 +44,7 @@ class SmallCard extends StatelessWidget {
                   cardName,
                   style: const TextStyle(
                     fontSize: 15,
-                    color: ThemeColors.blackText,
+                    color: Colors.black,
                   ),
                 )
               ],

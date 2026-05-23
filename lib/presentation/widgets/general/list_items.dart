@@ -1,16 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:songlib/presentation/theme/theme_styles.dart';
-//import 'package:textstyle_extensions/textstyle_extensions.dart';
-//import 'package:timeago/timeago.dart' as timeago;
 
+import '../../../core/theme/theme_colors.dart';
+import '../../../core/theme/theme_styles.dart';
 import '../../../domain/entities/basic_model.dart';
 import '../../../data/models/book.dart';
-//import '../../theme/theme_colors.dart';
-//import '../../theme/theme_styles.dart';
-//import '../../theme/theme_fonts.dart';
-import '../../theme/theme_colors.dart';
 import '../../../core/utils/app_util.dart';
 
 var locale = 'en';

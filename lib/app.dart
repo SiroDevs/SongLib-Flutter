@@ -4,14 +4,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'core/auth/auth_bloc.dart';
 import 'core/di/injectable.dart';
+import 'core/theme/theme_data.dart';
 import 'data/repositories/auth_repository.dart';
 import 'data/repositories/pref_repository.dart';
 import 'core/utils/constants/pref_constants.dart';
 import 'presentation/l10n/app_localizations.dart';
 import 'presentation/navigator/main_navigator.dart';
 import 'presentation/navigator/route_names.dart';
-import 'presentation/blocs/theme/theme_bloc.dart';
-import 'presentation/theme/theme_data.dart';
+import 'core/theme/bloc/theme_bloc.dart';
 
 class MyApp extends StatefulWidget {
   final Widget? home;

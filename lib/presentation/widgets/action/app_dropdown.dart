@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:styled_widget/styled_widget.dart';
 
-import '../../theme/theme_colors.dart';
-import '../../theme/theme_styles.dart';
+import '../../../core/theme/theme_colors.dart';
+import '../../../core/theme/theme_styles.dart';
 
 class DropDownWidget extends StatelessWidget {
   final String? value;
@@ -29,7 +29,7 @@ class DropDownWidget extends StatelessWidget {
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
       style: const TextStyle(
-        color: ThemeColors.blackText,
+        color: Colors.black,
         fontWeight: FontWeight.bold,
       ),
     ).padding(top: Sizes.sm);
@@ -52,7 +52,7 @@ class DropDownWidget extends StatelessWidget {
               value,
               style: const TextStyle(
                 fontSize: 16,
-                color: ThemeColors.blackText,
+                color: Colors.black,
                 fontWeight: FontWeight.w600,
               ),
             ).padding(left: 10),
@@ -60,7 +60,7 @@ class DropDownWidget extends StatelessWidget {
         }).toList(),
         icon: const Icon(
           Icons.arrow_drop_down,
-          color: ThemeColors.blackText,
+          color: Colors.black,
         ).padding(horizontal: 10),
         underline: const SizedBox.shrink(),
       ),
@@ -119,7 +119,7 @@ class AppDropdownState<T> extends State<AppDropdown<T>> {
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
       style: const TextStyle(
-        color: ThemeColors.blackText,
+        color: Colors.black,
         fontWeight: FontWeight.bold,
       ),
     ).padding(top: Sizes.sm);
@@ -143,7 +143,7 @@ class AppDropdownState<T> extends State<AppDropdown<T>> {
             widget.getItemLabel(value),
             style: const TextStyle(
               fontSize: 16,
-              color: ThemeColors.blackText,
+              color: Colors.black,
               fontWeight: FontWeight.w600,
             ),
           ).padding(left: 10),

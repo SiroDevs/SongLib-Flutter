@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:styled_widget/styled_widget.dart';
 import 'package:textstyle_extensions/textstyle_extensions.dart';
 
-import '../../../data/models/songext.dart';
-import '../../theme/theme_colors.dart';
-import '../../theme/theme_fonts.dart';
+import '../../../core/theme/theme_colors.dart';
+import '../../../core/theme/theme_fonts.dart';
 import '../../../core/utils/app_util.dart';
+import '../../../data/models/songext.dart';
 import 'tag_item.dart';
 
 // ignore: must_be_immutable

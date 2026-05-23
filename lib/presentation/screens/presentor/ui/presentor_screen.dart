@@ -5,6 +5,7 @@ import 'package:styled_widget/styled_widget.dart';
 import 'package:window_manager/window_manager.dart';
 
 import '../../../../core/di/injectable.dart';
+import '../../../../core/theme/theme_colors.dart';
 import '../../../../core/utils/app_util.dart';
 import '../../../../core/utils/constants/pref_constants.dart';
 import '../../../../core/utils/font_utils.dart';
@@ -15,7 +16,6 @@ import '../../../l10n/app_localizations.dart';
 import '../../../widgets/action/fab_widget.dart';
 import '../../../widgets/presentor/slide_container.dart';
 import '../../../widgets/progress/custom_snackbar.dart';
-import '../../../theme/theme_colors.dart';
 import '../../common/app_intents.dart';
 import '../../common/theme_button.dart';
 import '../common/presentor_utils.dart';

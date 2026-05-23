@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
+import '../../../../../core/theme/theme_colors.dart';
 import '../../../../../core/utils/constants/app_assets.dart';
 import '../../../../widgets/progress/advanced/advanced_progress.dart';
 import '../../../../widgets/progress/wave/wave_progress.dart';
-import '../../../../theme/theme_colors.dart';
 
 class BackgroundProgress extends StatelessWidget {
   final Size size;
